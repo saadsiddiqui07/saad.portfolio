@@ -1,0 +1,186 @@
+---
+title: React State Management Libraries.
+author: "Saad Siddiqui"
+metaTitle: "React State Management Libraries."
+metaDesc: "Diving into State Management Libraries of React."
+socialImage: images/react-state-management.png
+profileImage: images/fake-profile.jpeg
+date: '2022-10-07'
+tags:
+  - nextjs
+  - react
+  - javascript
+---
+
+State management libraries are one of the most important aspect of every application. The state of the application is managed throughout the application of how the data is stored and then rendered on the UI.
+
+As a developer we would avoid refetching the same data on different components when building a large application. **Storing data once in the state** of the application and rendering on the UI will increase the efficiency of the application.
+
+For example, We would not fetch the user data to render the username on multiple components, instead we save it once in the **state** when we log In and use it across our application.
+
+State management libraries are mainly used to **avoid prop drilling in our application**. Let us dive into some of the state management libraries and walkthrough them.
+
+## Redux
+
+![](https://typeofnan.dev/static/7d24a5049765ab5e2d535e571def080e/c1b63/redux.png)
+
+[Redux](https://redux.js.org/) is one of the most popular state management libraries used across applications in this ecosystem. Redux is an open-source JavaScript library for managing and centralising the application state.
+
+Redux is a monolithic library which has a top to bottom approach which means, A store holds the whole state tree of your application. The only way to change the state inside it is to dispatch an action on it.
+
+I personally do not use Redux in all of my projects due to the excessive lines of code and it also depends on the use-case of the application but Redux has been one of the most criticised library and has actually proven with the modern solution of managing state of the application.
+
+**Syntax for Redux.**
+
+> The given example is based on the approach I personally recommend to go with, which excludes multiple imports and excessive lines of code.
+
+```javascript
+const initialStore = { count: 0 };
+// create a store
+const store = createStore(reducer, initialStore);
+
+// react component
+const Counter = ({ count, increase, decrease }) => {
+	return(
+	  <div>
+		  <button onClick={() => decrease()}>Decrement - </button>
+		  <h1>{count}</h1>
+		  <button onClick={() => increase()}>Increment + </button>
+    </div>
+	)
+}
+// dispatch an action and get the state value from the store
+const mapToDispatchProps = ( dispatch, ownProps ) => {
+	const { count } = ownProps;
+	return {
+	    increase: () => dispatch({ ' //dispatch an action here' }),
+	    decrease: () => dispatch({ '// dispatch an action here' }),
+	}
+}
+
+export default connect(null, mapToDispatchProps)(Counter);
+```
+
+## React Context API
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--Qj17HL0m--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/emdosd9tj8bfly5is35y.png)
+[Context](https://reactjs.org/docs/context.html) provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree.
+
+In a typical React application, data is passed top-down (parent to child) via props, but such usage can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application.
+
+Context is designed to share data that can be considered **global** for a tree of React components, such as the current authenticated user, theme, or any other data
+
+**Syntax for context API.**
+
+> In Context API we have to create a provider inside which we wrap our entire application to perform actions on our state.
+
+```javascript
+export const StateContext = createContext();
+
+// application provider
+export const StateProvider = ({ reducer, initialState, children }) => (
+  <StateContext.Provider value={useReducer(reducer, initialState)}>
+    {children}
+  </StateContext.Provider>
+);
+
+export const useStateValue = () => useContext(StateContext);
+
+const initialState = { user: null };
+
+// react component
+const [{ count }] = useStateValue();
+// render state inside html
+return <h1>{count}</h1>;
+```
+
+> Note: You can write your dispatch actions in a reducer.js file for React Context as well as Redux.
+
+## Recoil
+
+![](https://recoiljs.org/img/og-image.png)
+[Recoil](https://recoiljs.org/) is an open source react state management library which was created by Facebook. Unlike
+few other libraries **Recoil** has an atomic structure which means it does not have a top to bottom approach but has an atomic approach.
+
+If an application has a maximum number of states in it then it can be written as an atom independently. Recoil gives you the ability to set, update and reset a particular state as per the flow of your application.
+
+Recoil has drawn attention due to its atomic structure in the react ecosystem as it has a convenient way of declaring state. Recoil lets you create a data-flow graph that flows from atoms through selectors and down into your React components. And this way the data is shared throughout the application.
+
+**Syntax for Recoil**
+
+```javascript
+const counterAtom = atom({
+  key: "counter",
+  default: 0,
+});
+
+// In react component
+const [count, setCount] = useRecoilState(counterAtom);
+
+// set actions
+const increment = () => setCount((prevCount) => prevCount + 1);
+const decrement = () => setCount((prevCount) => prevCount - 1);
+
+// render state inside html
+return <h1>{count}</h1>;
+```
+
+> Note: Recoil is in an experimental phase.
+
+## Jotai
+
+![](https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/29152/jotai-2.jpg)
+[Jotai](https://jotai.org/) is a state management library for React well known for its minimalistic API. Jotai takes a bottom-up approach to React state management with an atomic model inspired by Recoil and is one of favourite state management libraries I use and recommend to get started with.
+
+One can build state by combining atoms and renders are optimised based on atom dependency. This solves the extra re-render issue of React context. Jotai is as simple as `useState` hook, and all state is globally accessible.
+
+The atomic structure makes it convenient for developers to have hands onto their state as they can use with ease which is similar to the `useState` as the example given below. It eliminates extra lines of code and has the easiest syntax.
+
+**Syntax for jotai.**
+
+```javascript
+// Set the string key and the initial value
+const countAtom = atom < number > 0;
+
+const Counter = () => {
+  const [count, setCount] = useAtom(countAtom);
+
+  const increment = () => setCount((prevCount) => prevCount + 1);
+  const decrement = () => setCount((prevCount) => prevCount - 1);
+
+  return (
+    <div>
+      <button onClick={decrement}>Decrement -</button>
+      <h1>{count}</h1>
+      <button onClick={increment}>Increment +</button>
+    </div>
+  );
+};
+```
+
+The main concern about state management libraries is that **after every refresh the data is set back to initial state and not persisted throughout the application** and this is where jotai stands out for me.
+
+It has a hook `atomWithStorage` which takes a _key_ and _value_ and _storage_ which is optional. The atomWithStorage function creates an atom with a value persisted in `localStorage` or `sessionStorage`.
+
+```javascript
+import { atomWithStorage } from "jotai/utils";
+const countAtom = atomWithStorage("count", 0);
+```
+
+This is how the state of the application is stored in the localeStorage after an action is performed on the state. To delete an item from the storage we need to simply write
+
+```javascript
+import { RESET } from "jotai/utils";
+// inside the html
+<button onClick={() => setCount(RESET)}>Reset Atom</button>;
+```
+
+> **As we have discussed about multiple state management libraries, we all want to have an outcome as of which library I should use and in which type of project or which type of library is well suited for the flow of the application I am building.**
+
+**For small scale applications I'd go with either React Context API or Redux.**
+The real reason behind using them is, if you will have few states in your applications then it will be easier to manage in these two libraries as they have excessive lines of code and will keep your code understandable and readable as it will be a small application.
+
+**For large scale applications I would recommend going with jotai or recoil.**
+In any large scale application there will always be n number of states and having an atomic structural library will make it easier for me to manage, update or reset a state in few lines of code.
+
+As the project scales and gets bigger in terms of features you will have to manage state appropriately. Having small atoms all across the application will make your development faster and cleaner.
