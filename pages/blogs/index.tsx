@@ -3,8 +3,9 @@ import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import BackIcon from "@/components/icons/BackIcon";
+import Blog from "@/components/blog";
 
-export default function BlogsPage({ posts }: any) {
+export default function BlogsPage({ blogs }: any) {
   return (
     <section className="container my-10 p-5">
       <div className="flex flex-row items-center">
@@ -16,8 +17,11 @@ export default function BlogsPage({ posts }: any) {
         </Link>
         <h1 className="font-bold text-3xl">Back</h1>
       </div>
-      <div className="my-5 p-1">
-        <h1>Render all blogs here.</h1>
+
+      <div className="grid grid-cols-1 mb-2 md:p-0">
+        {blogs.map(({ slug, frontMatter }: any) => (
+          <Blog key={slug} slug={slug} frontMatter={frontMatter} />
+        ))}
       </div>
     </section>
   );
