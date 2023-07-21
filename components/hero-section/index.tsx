@@ -1,5 +1,6 @@
 import React from "react";
 import ArrowRight from "../icons/ArrowRight";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -15,18 +16,18 @@ const HeroSection = () => {
           </h1>
           <div className="flex items-start md:items-center mt-10 flex-col md:flex-row">
             <div className="mt-8 md:mt-0 mx-0 md:mx-6 space-y-2 text-white">
-              <a className="flex items-center" href="/blogs">
+              <Link className="flex items-center" href="/blogs">
                 <ArrowRight />
                 <b>My Blogs</b>
-              </a>
-              <a className="flex items-center" href="/experience">
+              </Link>
+              <Link className="flex items-center" href="/experience">
                 <ArrowRight />
                 <b>Work Experience</b>
-              </a>
-              <a className="flex items-center" href="/contact">
+              </Link>
+              <Link className="flex items-center" href="/contact">
                 <ArrowRight />
                 <b>Contact Me</b>
-              </a>
+              </Link>
             </div>
             <div className="flex-1 bg-yellow-400"></div>
             <div className="mt-8 md:mt-0 mx-0 md:mx-6 space-y-2 text-neutral-500">
