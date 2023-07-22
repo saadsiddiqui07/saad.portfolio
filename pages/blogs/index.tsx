@@ -2,8 +2,10 @@ import Link from "next/link";
 import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
+import readingTime from "reading-time";
 import BackIcon from "@/components/icons/BackIcon";
-import Blog from "@/components/blog";
+import BlogPost from "@/components/blog-post";
+import poppins from "@/styles";
 
 export default function BlogsPage({ blogs }: any) {
   return (
@@ -15,12 +17,17 @@ export default function BlogsPage({ blogs }: any) {
         >
           <BackIcon />
         </Link>
-        <h1 className="font-bold text-3xl">Back</h1>
+        <h1 className="font-bold text-xl">Back</h1>
       </div>
 
-      <div className="grid grid-cols-1 mb-2 md:p-0">
-        {blogs.map(({ slug, frontMatter }: any) => (
-          <Blog key={slug} slug={slug} frontMatter={frontMatter} />
+      <div className={`grid grid-cols-1 mb-2 md:p-0 ${poppins.className}`}>
+        {blogs.map(({ slug, frontMatter, readTime }: any) => (
+          <BlogPost
+            key={slug}
+            slug={slug}
+            frontMatter={frontMatter}
+            readTime={readTime}
+          />
         ))}
       </div>
     </section>
@@ -32,8 +39,9 @@ export const getStaticProps = () => {
   const blogs = files.map((blog) => {
     const slug = blog.split(".")[0];
     const readFile = fs.readFileSync(`posts/${blog}`, "utf-8");
-    const { data: frontMatter } = matter(readFile);
-    return { slug, frontMatter };
+    const { data: frontMatter, content } = matter(readFile);
+    const readTime = readingTime(content);
+    return { slug, frontMatter, readTime };
   });
   const byDate = (a: any, b: any) =>
     new Date(b.frontMatter.date).getTime() -
