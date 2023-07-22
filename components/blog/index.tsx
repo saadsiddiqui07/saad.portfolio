@@ -1,4 +1,4 @@
-import { formatDate } from "@/utils";
+import { formatDate, readTime } from "@/utils";
 import Link from "next/link";
 
 const Blog = ({ slug, frontMatter }: any) => {
