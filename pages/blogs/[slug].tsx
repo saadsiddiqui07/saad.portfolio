@@ -7,14 +7,15 @@ import md from "markdown-it";
 import matter from "gray-matter";
 import Prism from "prismjs";
 import { formatDate } from "@/utils";
+import TwitterIcon from "@/components/icons/TwitterIcon";
 
 export default function BlogDetails({ frontMatter, content, slug }: any) {
   const router = useRouter();
   useEffect(() => Prism.highlightAll(), [content]);
 
   return (
-    <div className="container my-10 p-5">
-      <div className="flex flex-row items-center">
+    <div className="container prose prose-white mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
+      <div className="flex">
         <div
           onClick={() => router.back()}
           className="transition cursor-pointer duration-200 ease-out hover:scale-125"
@@ -23,7 +24,7 @@ export default function BlogDetails({ frontMatter, content, slug }: any) {
         </div>
         <h1 className="font-bold text-xl">Back</h1>
       </div>
-      <section className={`mx-3 my-5 py-5`}>
+      <section className={`mx-3 my-5`}>
         <h2 className="text-3xl md:text-4xl flex-1 my-1 font-bold">
           {frontMatter.title}
         </h2>
@@ -37,6 +38,20 @@ export default function BlogDetails({ frontMatter, content, slug }: any) {
           <div dangerouslySetInnerHTML={{ __html: md().render(content) }}></div>
         </div>
       </section>
+      <div className="mx-3">
+        <h4 className="font-semibold text-xl text-white">
+          Liked this blog post?
+        </h4>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          className="flex text-white no-underline items-center gap-2"
+          href=""
+        >
+          <TwitterIcon />
+          <span className="font-bold">Share it on Twitter</span>
+        </a>
+      </div>
     </div>
   );
 }

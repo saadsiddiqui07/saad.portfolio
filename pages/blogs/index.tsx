@@ -9,7 +9,7 @@ import poppins from "@/styles";
 
 export default function BlogsPage({ blogs }: any) {
   return (
-    <section className="container my-10 p-5">
+    <section className="container px-2 py-5 md:py-10 my-10 md:px-1">
       <div className="flex flex-row items-center">
         <Link
           href="/"

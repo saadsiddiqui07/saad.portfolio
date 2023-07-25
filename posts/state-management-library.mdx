@@ -20,7 +20,9 @@ For example, We would not fetch the user data to render the username on multiple
 
 State management libraries are mainly used to **avoid prop drilling in our application**. Let us dive into some of the state management libraries and walkthrough them.
 
-## Redux
+&nbsp;
+
+# 1. Redux
 
 ![](https://typeofnan.dev/static/7d24a5049765ab5e2d535e571def080e/c1b63/redux.png)
 
@@ -61,7 +63,10 @@ const mapToDispatchProps = ( dispatch, ownProps ) => {
 export default connect(null, mapToDispatchProps)(Counter);
 ```
 
-## React Context API
+&nbsp;
+&nbsp;
+
+# 2. React Context API
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--Qj17HL0m--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/emdosd9tj8bfly5is35y.png)
 [Context](https://reactjs.org/docs/context.html) provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree.
@@ -96,7 +101,10 @@ return <h1>{count}</h1>;
 
 > Note: You can write your dispatch actions in a reducer.js file for React Context as well as Redux.
 
-## Recoil
+&nbsp;
+&nbsp;
+
+# 3. Recoil
 
 ![](https://recoiljs.org/img/og-image.png)
 [Recoil](https://recoiljs.org/) is an open source react state management library which was created by Facebook. Unlike
@@ -127,7 +135,10 @@ return <h1>{count}</h1>;
 
 > Note: Recoil is in an experimental phase.
 
-## Jotai
+&nbsp;
+&nbsp;
+
+# 4. Jotai
 
 ![](https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/29152/jotai-2.jpg)
 [Jotai](https://jotai.org/) is a state management library for React well known for its minimalistic API. Jotai takes a bottom-up approach to React state management with an atomic model inspired by Recoil and is one of favourite state management libraries I use and recommend to get started with.
@@ -184,3 +195,5 @@ The real reason behind using them is, if you will have few states in your applic
 In any large scale application there will always be n number of states and having an atomic structural library will make it easier for me to manage, update or reset a state in few lines of code.
 
 As the project scales and gets bigger in terms of features you will have to manage state appropriately. Having small atoms all across the application will make your development faster and cleaner.
+
+---
