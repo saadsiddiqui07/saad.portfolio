@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import BackIcon from "@/components/icons/BackIcon";
-import poppins from "@/styles";
 import { useRouter } from "next/router";
 import fs from "fs";
 import md from "markdown-it";
@@ -8,51 +7,97 @@ import matter from "gray-matter";
 import Prism from "prismjs";
 import { formatDate } from "@/utils";
 import TwitterIcon from "@/components/icons/TwitterIcon";
+import Seo from "@/components/seo";
+import LinkedinIcon from "@/components/icons/LinkedinIcon";
+import FacebookIcon from "@/components/icons/FacebookName";
 
 export default function BlogDetails({ frontMatter, content, slug }: any) {
   const router = useRouter();
+  const blogURL = `https://saad-portfolio-nu.vercel.app/blogs/${slug}`;
+
+  const handleShare = (medium: "twitter" | "facebook" | "linkedin") => {
+    if (medium === "twitter") {
+      const url = new URL("https://twitter.com/intent/tweet");
+      const text = `Checkout the blog: "${frontMatter.title}",here 👉 ${window.location.href}`;
+      url.searchParams.append("text", text);
+      window.open(url);
+    } else if (medium === "facebook") {
+      const url = new URL(
+        `http://www.facebook.com/share.php?u=${window.location.href}`
+      );
+      window.open(url);
+    } else if (medium === "linkedin") {
+      const url = `https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}&title=${frontMatter.title}&summary=${frontMatter.description}`;
+      window.open(url);
+    }
+  };
+
   useEffect(() => Prism.highlightAll(), [content]);
 
   return (
-    <div className="container prose prose-white mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
-      <div className="flex">
-        <div
-          onClick={() => router.back()}
-          className="transition cursor-pointer duration-200 ease-out hover:scale-125"
-        >
-          <BackIcon />
+    <>
+      <Seo
+        title={frontMatter.title}
+        blogImage={frontMatter.socialImage}
+        description={frontMatter.metaDesc}
+        url={blogURL}
+      />
+      <div className="container prose prose-white mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
+        <div className="flex">
+          <div
+            onClick={() => router.back()}
+            className="transition cursor-pointer duration-200 ease-out hover:scale-125"
+          >
+            <BackIcon />
+          </div>
+          <h1 className="font-bold text-xl">Back</h1>
         </div>
-        <h1 className="font-bold text-xl">Back</h1>
+        <section className={`mx-3 mt-5 mb-2`}>
+          <h2 className="text-3xl md:text-4xl flex-1 my-1 font-bold">
+            {frontMatter.title}
+          </h2>
+          <div className="my-2">
+            <h1 className="font-normal text-sm md:text-md text-gray-400">
+              {formatDate(frontMatter.date)}
+              {" - "}7 min read
+            </h1>
+          </div>
+          <div>
+            <div
+              dangerouslySetInnerHTML={{ __html: md().render(content) }}
+            ></div>
+          </div>
+        </section>
+        <div className="mx-3">
+          <h4 className="font-semibold text-xl text-gray-400">
+            Liked this blog post?
+          </h4>
+          <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row md:items-center justify-between my-1">
+            <button
+              onClick={() => handleShare("twitter")}
+              className="flex text-sm md:text-md group text-white no-underline items-center gap-2 duration-300 transition hover:underline"
+            >
+              <TwitterIcon />
+              <span className="font-semibold">Share it on Twitter</span>
+            </button>
+            <button
+              onClick={() => handleShare("linkedin")}
+              className="flex text-sm md:text-md group text-white no-underline items-center gap-2 duration-300 transition hover:underline"
+            >
+              <LinkedinIcon />
+              <span className="font-semibold">Share it on LinkedIn</span>
+            </button>
+            <button
+              onClick={() => handleShare("facebook")}
+              className="flex text-sm md:text-md group text-white no-underline items-center gap-2 duration-300 transition hover:underline"
+            >
+              <FacebookIcon />
+              <span className="font-semibold">Share it on Facebook</span>
+            </button>
+          </div>
+        </div>
       </div>
-      <section className={`mx-3 my-5`}>
-        <h2 className="text-3xl md:text-4xl flex-1 my-1 font-bold">
-          {frontMatter.title}
-        </h2>
-        <div className="my-2">
-          <h1 className="font-normal text-sm md:text-md text-gray-400">
-            {formatDate(frontMatter.date)}
-            {" - "}7 min read
-          </h1>
-        </div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: md().render(content) }}></div>
-        </div>
-      </section>
-      <div className="mx-3">
-        <h4 className="font-semibold text-xl text-white">
-          Liked this blog post?
-        </h4>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          className="flex text-white no-underline items-center gap-2"
-          href=""
-        >
-          <TwitterIcon />
-          <span className="font-bold">Share it on Twitter</span>
-        </a>
-      </div>
-    </div>
+    </>
   );
 }
 

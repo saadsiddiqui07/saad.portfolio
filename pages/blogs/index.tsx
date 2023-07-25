@@ -6,31 +6,35 @@ import readingTime from "reading-time";
 import BackIcon from "@/components/icons/BackIcon";
 import BlogPost from "@/components/blog-post";
 import poppins from "@/styles";
+import Seo from "@/components/seo";
 
 export default function BlogsPage({ blogs }: any) {
   return (
-    <section className="container px-2 py-5 md:py-10 my-10 md:px-1">
-      <div className="flex flex-row items-center">
-        <Link
-          href="/"
-          className="transition duration-200 ease-out hover:scale-125"
-        >
-          <BackIcon />
-        </Link>
-        <h1 className="font-bold text-xl">Back</h1>
-      </div>
+    <>
+      <Seo />
+      <section className="container px-2 py-5 md:py-10 my-10 md:px-1">
+        <div className="flex flex-row items-center">
+          <Link
+            href="/"
+            className="transition duration-200 ease-out hover:scale-125"
+          >
+            <BackIcon />
+          </Link>
+          <h1 className="font-bold text-xl">Back</h1>
+        </div>
 
-      <div className={`grid grid-cols-1 mb-2 md:p-0 ${poppins.className}`}>
-        {blogs.map(({ slug, frontMatter, readTime }: any) => (
-          <BlogPost
-            key={slug}
-            slug={slug}
-            frontMatter={frontMatter}
-            readTime={readTime}
-          />
-        ))}
-      </div>
-    </section>
+        <div className={`grid grid-cols-1 mb-2 md:p-0 ${poppins.className}`}>
+          {blogs.map(({ slug, frontMatter, readTime }: any) => (
+            <BlogPost
+              key={slug}
+              slug={slug}
+              frontMatter={frontMatter}
+              readTime={readTime}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 
