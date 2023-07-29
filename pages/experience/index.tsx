@@ -1,4 +1,5 @@
 import BackIcon from "@/components/icons/BackIcon";
+import Steps from "@/components/steps";
 import Link from "next/link";
 import React from "react";
 
@@ -16,7 +17,7 @@ const ExperiencePage = () => {
       </div>
       <main className="mt-4 mx-4">
         <h1 className="text-3xl md:text-4xl">Experience</h1>
-        <ul className="relative m-0 w-full list-none overflow-hidden p-0 transition-[height] duration-200 ease-in-out">
+        {/* <ul className="relative m-0 w-full list-none overflow-hidden p-0 transition-[height] duration-200 ease-in-out">
           <li className="relative h-fit after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-2.45rem)] after:w-px after:bg-[#e0e0e0] after:content-[''] dark:after:bg-neutral-600">
             <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-[''] focus:outline-none dark:after:bg-neutral-600">
               <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]"></span>
@@ -54,7 +55,8 @@ const ExperiencePage = () => {
               nisi ut aliquip ex ea commodo consequat.
             </div>
           </li>
-        </ul>
+        </ul> */}
+        <Steps />
       </main>
     </div>
   );
