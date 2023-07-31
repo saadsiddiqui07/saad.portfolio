@@ -1,6 +1,10 @@
 import React from "react";
 
-const BackIcon = () => {
+interface Theme {
+  theme: string;
+}
+
+const BackIcon = ({ theme }: Theme) => {
   return (
     <svg
       width="28"
@@ -10,8 +14,9 @@ const BackIcon = () => {
       fill="none"
     >
       <path
+        className="text-red-500"
         d="M328 112 184 256l144 144"
-        stroke="white"
+        stroke={theme === "dark" ? "white" : "black"}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={35}

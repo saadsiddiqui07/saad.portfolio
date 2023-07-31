@@ -10,9 +10,11 @@ import TwitterIcon from "@/components/icons/TwitterIcon";
 import Seo from "@/components/seo";
 import LinkedinIcon from "@/components/icons/LinkedinIcon";
 import FacebookIcon from "@/components/icons/FacebookName";
+import { useTheme } from "next-themes";
 
 export default function BlogDetails({ frontMatter, content, slug }: any) {
   const router = useRouter();
+  const { theme } = useTheme();
   const blogURL = `https://saad-portfolio-nu.vercel.app/blogs/${slug}`;
 
   const handleShare = (medium: "twitter" | "facebook" | "linkedin") => {
@@ -42,15 +44,15 @@ export default function BlogDetails({ frontMatter, content, slug }: any) {
         description={frontMatter.metaDesc}
         url={blogURL}
       />
-      <div className="container prose prose-white mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
+      <div className="container prose dark:prose-white mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
         <div className="flex">
           <div
             onClick={() => router.back()}
             className="transition cursor-pointer duration-200 ease-out hover:scale-125"
           >
-            <BackIcon />
+            <BackIcon theme={theme!} />
           </div>
-          <h1 className="font-bold text-xl">Back</h1>
+          <h1 className="font-bold dark:text-white text-xl">Blogs</h1>
         </div>
         <section className={`mx-3 mt-5 mb-2`}>
           <h2 className="text-3xl md:text-4xl flex-1 my-1 font-bold">

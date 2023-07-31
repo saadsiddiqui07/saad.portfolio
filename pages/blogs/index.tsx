@@ -7,8 +7,10 @@ import BackIcon from "@/components/icons/BackIcon";
 import BlogPost from "@/components/blog-post";
 import poppins from "@/styles";
 import Seo from "@/components/seo";
+import { useTheme } from "next-themes";
 
 export default function BlogsPage({ blogs }: any) {
+  const { theme } = useTheme();
   return (
     <>
       <Seo />
@@ -18,7 +20,7 @@ export default function BlogsPage({ blogs }: any) {
             href="/"
             className="transition duration-200 ease-out hover:scale-125"
           >
-            <BackIcon />
+            <BackIcon theme={theme!} />
           </Link>
           <h1 className="font-bold text-xl">Back</h1>
         </div>
