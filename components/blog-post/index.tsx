@@ -6,7 +6,7 @@ const BlogPost = ({ slug, frontMatter, readTime }: any) => {
     <Link
       key={slug}
       href={`/blogs/${slug}`}
-      className="flex flex-col transition duration-400 ease-out bg-gray-200 hover:bg-gray-300 dark:bg-[#161616] dark-hover:bg-[#202020] m-3 group cursor-pointer shadow-lg rounded-lg"
+      className="flex flex-col transition duration-400 ease-out bg-gray-200 hover:bg-gray-300 dark:bg-[#161616] dark:hover:bg-[#202020] m-3 group cursor-pointer shadow-lg rounded-lg"
     >
       <div className="p-4 h-full flex flex-col">
         <h2 className="text-xl md:text-xl flex-1 my-1 font-bold">

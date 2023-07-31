@@ -59,7 +59,7 @@ export default function BlogDetails({ frontMatter, content, slug }: any) {
             {frontMatter.title}
           </h2>
           <div className="my-2">
-            <h1 className="font-normal text-sm md:text-md text-gray-400">
+            <h1 className="font-normal text-sm md:text-md dark:text-gray-400">
               {formatDate(frontMatter.date)}
               {" - "}7 min read
             </h1>
@@ -77,21 +77,21 @@ export default function BlogDetails({ frontMatter, content, slug }: any) {
           <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row md:items-center justify-between my-1">
             <button
               onClick={() => handleShare("twitter")}
-              className="flex text-sm md:text-md group text-white no-underline items-center gap-2 duration-300 transition hover:underline"
+              className="flex text-sm md:text-md group dark:text-white no-underline items-center gap-2 duration-300 transition hover:underline"
             >
               <TwitterIcon />
               <span className="font-semibold">Share it on Twitter</span>
             </button>
             <button
               onClick={() => handleShare("linkedin")}
-              className="flex text-sm md:text-md group text-white no-underline items-center gap-2 duration-300 transition hover:underline"
+              className="flex text-sm md:text-md group dark:text-white no-underline items-center gap-2 duration-300 transition hover:underline"
             >
               <LinkedinIcon />
               <span className="font-semibold">Share it on LinkedIn</span>
             </button>
             <button
               onClick={() => handleShare("facebook")}
-              className="flex text-sm md:text-md group text-white no-underline items-center gap-2 duration-300 transition hover:underline"
+              className="flex text-sm md:text-md group dark:text-white no-underline items-center gap-2 duration-300 transition hover:underline"
             >
               <FacebookIcon />
               <span className="font-semibold">Share it on Facebook</span>
