@@ -35,21 +35,18 @@ const Steps = () => {
         </div>
         <div className="pt-1 pb-8">
           <a
+            href="https://heisentech.com/"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://luciensolutions.com/"
             className="text-md md:text-lg hover:underline dark:text-gray-300"
           >
-            Lucien Solutions
+            Heisentech Solutions
           </a>
-
           <p className="text-gray-500 dark:text-gray-400 italic text-xs md:text-sm font-normal">
-            June 2022 - July 2022
+            July 2022 -- present
           </p>
-          <p className="text-xl font-bold mt-2 mb-1">
-            React Frontend developer
-          </p>
-          <ul className="list-disc list-outside text-md dark:text-gray-400 ">
+          <p className="text-xl font-bold mt-2 mb-1">React developer</p>
+          <ul className="list-disc text-md dark:text-gray-400 ">
             <li>
               As a frontend developer, I refactored the purchased ReactJS
               template, removing unused code, and organizing components to
@@ -100,17 +97,20 @@ const Steps = () => {
         </div>
         <div className="pt-1 pb-8">
           <a
-            href="https://heisentech.com/"
             target="_blank"
             rel="noopener noreferrer"
+            href="https://luciensolutions.com/"
             className="text-md md:text-lg hover:underline dark:text-gray-300"
           >
-            Heisentech Solutions
+            Lucien Solutions
           </a>
+
           <p className="text-gray-500 dark:text-gray-400 italic text-xs md:text-sm font-normal">
-            July 2022 -- present
+            June 2022 - July 2022
           </p>
-          <p className="text-xl font-bold mt-2 mb-1">React developer</p>
+          <p className="text-xl font-bold mt-2 mb-1">
+            React Frontend developer
+          </p>
           <ul className="list-disc list-outside text-md dark:text-gray-400 ">
             <li>
               As a frontend developer, I refactored the purchased ReactJS
