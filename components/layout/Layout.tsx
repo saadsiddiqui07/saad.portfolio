@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import Header from "../Header";
 
 interface Props {
   children: React.ReactNode;
@@ -13,6 +14,7 @@ const poppins = Poppins({
 const Layout = ({ children }: Props) => {
   return (
     <>
+      <Header />
       <main className={poppins.className}>{children}</main>
     </>
   );

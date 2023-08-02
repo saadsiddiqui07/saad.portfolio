@@ -12,9 +12,14 @@ import LinkedinIcon from "@/components/icons/LinkedinIcon";
 import FacebookIcon from "@/components/icons/FacebookName";
 import readingTime from "reading-time";
 
-export default function BlogDetails({ frontMatter, content, slug, readTime }: any) {
+export default function BlogDetails({
+  frontMatter,
+  content,
+  slug,
+  readTime,
+}: any) {
   const router = useRouter();
-  const blogURL = `https://saad-portfolio-nu.vercel.app/blogs/${slug}`;
+  const blogURL = `https://saad-portfolio-eight.vercel.app//blogs/${slug}`;
 
   const handleShare = (medium: "twitter" | "facebook" | "linkedin") => {
     if (medium === "twitter") {
@@ -49,7 +54,7 @@ export default function BlogDetails({ frontMatter, content, slug, readTime }: an
             onClick={() => router.back()}
             className="transition cursor-pointer duration-200 ease-out hover:scale-125"
           >
-            <BackIcon  />
+            <BackIcon />
           </div>
           <h1 className="font-bold dark:text-white text-xl">Blogs</h1>
         </div>
@@ -60,7 +65,8 @@ export default function BlogDetails({ frontMatter, content, slug, readTime }: an
           <div className="my-2">
             <h1 className="font-normal text-sm md:text-md dark:text-gray-400">
               {formatDate(frontMatter.date)}
-              {" - "}{readTime.text}
+              {" - "}
+              {readTime.text}
             </h1>
           </div>
           <div>
@@ -124,7 +130,7 @@ export const getStaticProps = ({ params: { slug } }: any) => {
       frontMatter,
       content,
       slug,
-      readTime
+      readTime,
     },
   };
 };
