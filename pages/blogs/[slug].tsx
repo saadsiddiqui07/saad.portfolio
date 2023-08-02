@@ -10,11 +10,10 @@ import TwitterIcon from "@/components/icons/TwitterIcon";
 import Seo from "@/components/seo";
 import LinkedinIcon from "@/components/icons/LinkedinIcon";
 import FacebookIcon from "@/components/icons/FacebookName";
-import { useTheme } from "next-themes";
+import readingTime from "reading-time";
 
-export default function BlogDetails({ frontMatter, content, slug }: any) {
+export default function BlogDetails({ frontMatter, content, slug, readTime }: any) {
   const router = useRouter();
-  const { theme } = useTheme();
   const blogURL = `https://saad-portfolio-nu.vercel.app/blogs/${slug}`;
 
   const handleShare = (medium: "twitter" | "facebook" | "linkedin") => {
@@ -44,24 +43,24 @@ export default function BlogDetails({ frontMatter, content, slug }: any) {
         description={frontMatter.metaDesc}
         url={blogURL}
       />
-      <div className="container prose dark:prose-white mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
+      <div className="container mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
         <div className="flex">
           <div
             onClick={() => router.back()}
             className="transition cursor-pointer duration-200 ease-out hover:scale-125"
           >
-            <BackIcon theme={theme!} />
+            <BackIcon  />
           </div>
           <h1 className="font-bold dark:text-white text-xl">Blogs</h1>
         </div>
-        <section className={`mx-3 mt-5 mb-2`}>
+        <section className={`mx-3 mt-5 mb-2 prose dark:prose-white`}>
           <h2 className="text-3xl md:text-4xl flex-1 my-1 font-bold">
             {frontMatter.title}
           </h2>
           <div className="my-2">
             <h1 className="font-normal text-sm md:text-md dark:text-gray-400">
               {formatDate(frontMatter.date)}
-              {" - "}7 min read
+              {" - "}{readTime.text}
             </h1>
           </div>
           <div>
@@ -119,11 +118,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = ({ params: { slug } }: any) => {
   const readFile = fs.readFileSync(`posts/${slug}.mdx`, "utf-8");
   const { data: frontMatter, content } = matter(readFile);
+  const readTime = readingTime(content);
   return {
     props: {
       frontMatter,
       content,
       slug,
+      readTime
     },
   };
 };

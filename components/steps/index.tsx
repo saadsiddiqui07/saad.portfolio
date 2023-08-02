@@ -108,7 +108,7 @@ const Steps = () => {
             Heisentech Solutions
           </a>
           <p className="text-gray-500 dark:text-gray-400 italic text-xs md:text-sm font-normal">
-            June 2022 -- present
+            July 2022 -- present
           </p>
           <p className="text-xl font-bold mt-2 mb-1">React developer</p>
           <ul className="list-disc list-outside text-md dark:text-gray-400 ">
