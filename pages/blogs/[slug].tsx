@@ -20,7 +20,7 @@ export default function BlogDetails({
   readTime,
 }: any) {
   const router = useRouter();
-  const blogURL = `https://saad-portfolio-eight.vercel.app//blogs/${slug}`;
+  const blogURL = `https://saad-dev.vercel.app/blogs/${slug}`;
 
   const handleShare = (medium: "twitter" | "facebook" | "linkedin") => {
     if (medium === "twitter") {

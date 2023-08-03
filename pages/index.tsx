@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Saad Siddiqui | React Developer</title>
       </Head>
-      <main className="mt-10 md:mt-20">
+      <main className="md:mt-20">
         <Header />
         <HeroSection />
       </main>
