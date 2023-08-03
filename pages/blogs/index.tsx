@@ -7,22 +7,25 @@ import BackIcon from "@/components/icons/BackIcon";
 import BlogPost from "@/components/blog-post";
 import poppins from "@/styles";
 import Seo from "@/components/seo";
+import Head from "next/head";
 
 export default function BlogsPage({ blogs }: any) {
   return (
     <>
       <Seo />
       <section className="container px-2 py-5 md:py-10 my-10 md:px-1">
+        <Head>
+          <title>Saad Siddiqui | Blogs</title>
+        </Head>
         <div className="flex flex-row items-center">
           <Link
             href="/"
             className="transition duration-200 ease-out hover:scale-125"
           >
-            <BackIcon  />
+            <BackIcon />
           </Link>
           <h1 className="font-bold text-xl">Back</h1>
         </div>
-
         <div className={`grid grid-cols-1 mb-2 md:p-0 ${poppins.className}`}>
           {blogs.map(({ slug, frontMatter, readTime }: any) => (
             <BlogPost

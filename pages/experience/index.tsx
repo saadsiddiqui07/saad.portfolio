@@ -3,10 +3,14 @@ import BackIcon from "@/components/icons/BackIcon";
 import Steps from "@/components/steps";
 import Link from "next/link";
 import { SKILLS } from "@/constants";
+import Head from "next/head";
 
 const ExperiencePage = () => {
   return (
     <div className="container px-2 py-5 md:py-10 my-10 md:px-1">
+      <Head>
+        <title>Saad Siddiqui | Experience </title>
+      </Head>
       <div className="flex flex-row items-center">
         <Link
           href="/"

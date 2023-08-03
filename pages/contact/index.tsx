@@ -8,6 +8,7 @@ import React, {
 import BackIcon from "@/components/icons/BackIcon";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import Head from "next/head";
 
 interface InputTypes {
   inpLabel: string;
@@ -97,6 +98,9 @@ const ContactPage = () => {
 
   return (
     <div className={`container px-4 py-5 md:py-10 my-10 md:px-1`}>
+      <Head>
+        <title>Saad Siddiqui | Contact</title>
+      </Head>
       <div className="flex flex-row items-center">
         <Link
           href="/"

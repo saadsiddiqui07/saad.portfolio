@@ -11,6 +11,7 @@ import Seo from "@/components/seo";
 import LinkedinIcon from "@/components/icons/LinkedinIcon";
 import FacebookIcon from "@/components/icons/FacebookName";
 import readingTime from "reading-time";
+import Head from "next/head";
 
 export default function BlogDetails({
   frontMatter,
@@ -49,6 +50,9 @@ export default function BlogDetails({
         url={blogURL}
       />
       <div className="container mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
+        <Head>
+          <title>Blogs | {frontMatter.title}</title>
+        </Head>
         <div className="flex">
           <div
             onClick={() => router.back()}
