@@ -1,5 +1,5 @@
 import BackIcon from "@/components/icons/BackIcon";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import Link from "next/link";
 import React, {
   Dispatch,
@@ -17,6 +17,8 @@ interface InputTypes {
   state: any;
   setState: Dispatch<SetStateAction<any>>;
 }
+
+const GETFORM_KEY = process.env.NEXT_PUBLIC_GETFORM_KEY;
 
 function Input({
   inpLabel,
@@ -62,7 +64,36 @@ const ContactPage = () => {
   const [message, setMessage] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {};
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      setIsSubmitting(true);
+      await fetch(`https://getform.io/f/${GETFORM_KEY}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          Name: name,
+          Email: email,
+          Message: message,
+        }),
+      });
+      setName("");
+      setEmail("");
+      setMessage("");
+      toast.success("Message sent successfully", {
+        position: "top-right",
+        style: { backgroundColor: "royalblue", color: "white" },
+        duration: 4000,
+      });
+    } catch (err) {
+      toast.error("Something went wrong", {
+        position: "top-center",
+        duration: 4000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className={`container px-4 py-5 md:py-10 my-10 md:px-1`}>
@@ -119,15 +150,6 @@ const ContactPage = () => {
           state={message}
           setState={setMessage}
         />
-        {/* <label className="text-md inline-block pb-2">
-          <input
-            type="checkbox"
-            checked={isSubscribe}
-            className="h-4 w-4 align-middle"
-            onChange={(e) => setIsSubscribe(e.target.checked)}
-          />
-          <span className="pl-2 align-middle">Subscribe to Articles</span>
-        </label> */}
         <button
           type="submit"
           className="mt-3 mb-6 w-full rounded bg-black px-4 py-2 text-white disabled:cursor-wait dark:bg-white dark:text-black"
