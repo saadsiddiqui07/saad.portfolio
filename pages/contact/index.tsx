@@ -1,6 +1,3 @@
-import BackIcon from "@/components/icons/BackIcon";
-import toast from "react-hot-toast";
-import Link from "next/link";
 import React, {
   Dispatch,
   FormEvent,
@@ -8,6 +5,9 @@ import React, {
   SetStateAction,
   useState,
 } from "react";
+import BackIcon from "@/components/icons/BackIcon";
+import toast from "react-hot-toast";
+import Link from "next/link";
 
 interface InputTypes {
   inpLabel: string;
@@ -146,7 +146,7 @@ const ContactPage = () => {
           inpLabel="Message"
           inputType="textarea"
           id="message"
-          placeholder="I need an app for my upcoming event to register participants and give away e-tickets, and verify them at the entry, let's connect and dicsuss more!"
+          placeholder="I need a website for my business / personal portfolio website, let's connect and dicsuss more!"
           state={message}
           setState={setMessage}
         />

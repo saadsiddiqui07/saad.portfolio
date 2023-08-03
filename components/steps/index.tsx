@@ -11,7 +11,7 @@ const Steps = () => {
               <CodeIcon />
             </div>
           </div>
-          <div className="w-[1.5px] h-full bg-gray-300 dark:bg-white" />
+          <div className="w-[1.5px] h-full bg-gray-300 dark:bg-gray-600" />
         </div>
         <div className="pt-1 pb-8">
           <a
@@ -26,21 +26,66 @@ const Steps = () => {
             July 2022 -- present
           </p>
           <p className="text-xl font-bold mt-2 mb-1">React developer</p>
+
+          <p className="text-md font-semibold mt-4 text-gray-600 dark:text-gray-300">
+            Internal Project
+          </p>
           <ul className="list-disc text-md dark:text-gray-400 ">
             <li>
-              As a frontend developer, I refactored the purchased ReactJS
-              template, removing unused code, and organizing components to
-              improve maintainability, readability, and minimize potential bugs.
+              I worked on an application where I improved chat page UI using
+              Next.js, TypeScript, Jotai, Supabase, and Tailwind CSS.
             </li>
             <li>
-              I integrated File Upload APIs for PDFs and documents, ensuring
-              seamless user uploads with proper validation and error handling,
-              and secure backend storage.
+              Key contributor in UI implementation and leveraging Next.js
+              framework.
             </li>
             <li>
-              I revamped routes and components, implementing new styles to align
-              with company branding and design guidelines, resulting in a
-              polished and consistent user experience.
+              Implemented authentication using Supabase to handle
+              authentication.
+            </li>
+          </ul>
+          <p className="text-md font-semibold mt-4 text-gray-600 dark:text-gray-300">
+            Blog&#39;s site
+          </p>
+          <ul className="list-disc text-md dark:text-gray-400 ">
+            <li>
+              Individually developed and implemented a visually appealing
+              company’s blog website.{" "}
+              <a
+                className="underline"
+                href="https://blogs.heisentech.com/"
+                target="_blank"
+              >
+                Check it out here.
+              </a>
+            </li>
+            <li>
+              Integrated an email subscription functionality which allows users
+              to subscribe.
+            </li>
+            <li>
+              I made it SEO friendly for better search results and optimized the
+              performance
+            </li>
+          </ul>
+          <p className="text-md font-semibold mt-4 text-gray-600 dark:text-gray-300">
+            React Native App
+          </p>
+          <ul className="list-disc text-md dark:text-gray-400 ">
+            <li>
+              I developed and designed multiple screens for a React Native
+              project (android & iOS), ensuring a visually appealing user
+              interface
+            </li>
+            <li>
+              I migrated from Supabase and integrated Google Sheets API for
+              seamless row, sheet, and cell management within the app for
+              managing data.
+            </li>
+            <li>
+              Integrated Google authentication and implemented React Native
+              SQLite storage for efficient data storage and offline
+              functionality.
             </li>
           </ul>
         </div>
@@ -52,7 +97,7 @@ const Steps = () => {
               <CodeIcon />
             </div>
           </div>
-          <div className="w-[1.5px] h-full bg-gray-300 dark:bg-white" />
+          <div className="w-[1.5px] h-full bg-gray-300 dark:bg-gray-600" />
         </div>
         <div className="pt-1 pb-8">
           <a
@@ -86,6 +131,12 @@ const Steps = () => {
               with company branding and design guidelines, resulting in a
               polished and consistent user experience.
             </li>
+            <li>
+              I Managed a team member by setting clear project requirements,
+              providing regular feedback, and facilitating their professional
+              growth as a React developer through knowledge-sharing sessions and
+              skill-building opportunities.
+            </li>
           </ul>
         </div>
       </div>
@@ -96,7 +147,7 @@ const Steps = () => {
               <CodeIcon />
             </div>
           </div>
-          <div className="w-[1.5px] h-full bg-gray-300 dark:bg-white" />
+          <div className="w-[1.5px] h-full bg-gray-300 dark:bg-gray-600" />
         </div>
         <div className="pt-1 pb-8">
           <a
@@ -114,19 +165,24 @@ const Steps = () => {
           <p className="text-xl font-bold mt-2 mb-1">Software developer</p>
           <ul className="list-disc list-outside text-md dark:text-gray-400 ">
             <li>
-              As a freelance developer, I refactored the purchased ReactJS
-              template, removing unused code, and organizing components to
-              improve maintainability, readability, and minimize potential bugs.
+              Using an agile approach I successfully built a food ordering web
+              app using React.js and Material UI.{" "}
+              <a
+                className="underline"
+                href="https://restaurant-app-mu.vercel.app"
+                target="_blank"
+              >
+                Checkout the deployed app.
+              </a>
             </li>
             <li>
-              I integrated File Upload APIs for PDFs and documents, ensuring
-              seamless user uploads with proper validation and error handling,
-              and secure backend storage.
+              I leveraged Firebase to seamlessly integrate backend
+              functionalities, such as real-time order processing and database
+              management.
             </li>
             <li>
-              I revamped routes and components, implementing new styles to align
-              with company branding and design guidelines, resulting in a
-              polished and consistent user experience.
+              I collaborated closely with the client throughout the development
+              process, actively seeking and implementing their feedback.
             </li>
           </ul>
         </div>
