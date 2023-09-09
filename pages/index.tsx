@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <div className="md:max-w-6xl flex-1 md:mx-auto">
       <Head>
-        <title>Saad Siddiqui | React Developer</title>
+        <title>Saad Siddiqui | Software Developer</title>
+        <link rel="icon" href="/react-logo.png" sizes="any" />
       </Head>
       <main className="md:mt-20">
         <Header />
