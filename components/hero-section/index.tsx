@@ -6,17 +6,19 @@ import GithubIcon from "../icons/GithubIcon";
 import LinkedinIcon from "../icons/LinkedinIcon";
 import poppins from "@/styles";
 
+// dark:from-blue-300 dark:via-teal-300 dark:to-indigo-300
+
 const HeroSection = () => {
   return (
     <div className={`${poppins.className}`}>
       <div className="flex flex-col items-center justify-center mt-20 mx-5 md:mt-30 sm:mx-10 md:mx-20">
         <div className="items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl text-center">
             <span className="dark:text-gray-400 text3xl sm:text-4xl md:text-5xl">
               {"<>"}
             </span>{" "}
             Hey!👋
-            <span className="font-bold bg-gradient-to-r dark:from-blue-300 dark:via-teal-300 dark:to-orange-300 from-blue-500 via-teal-500 to-orange-500 text-transparent bg-clip-text bg-300% animate-gradient">
+            <span className="font-bold bg-gradient-to-r  from-red-500 via-blue-500 to-teal-500 text-transparent bg-clip-text bg-300% animate-gradient">
               {" "}
               I’m Saad Siddiqui, React & React Native developer.
             </span>{" "}
