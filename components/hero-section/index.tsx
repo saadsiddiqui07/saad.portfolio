@@ -13,12 +13,12 @@ const HeroSection = () => {
     <div className={`${poppins.className}`}>
       <div className="flex flex-col items-center justify-center mt-20 mx-5 md:mt-30 sm:mx-10 md:mx-20">
         <div className="items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl text-center">
             <span className="dark:text-gray-400 text3xl sm:text-4xl md:text-5xl">
               {"<>"}
             </span>{" "}
             Hey!👋
-            <span className="font-bold bg-gradient-to-r  from-red-500 via-blue-500 to-teal-500 text-transparent bg-clip-text bg-300% animate-gradient">
+            <span className="font-bold bg-gradient-to-r from-red-500 via-blue-500 to-teal-500 text-transparent bg-clip-text bg-300% animate-gradient">
               {" "}
               I’m Saad Siddiqui, React & React Native developer.
             </span>{" "}
