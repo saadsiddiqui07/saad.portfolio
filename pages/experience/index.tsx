@@ -51,8 +51,8 @@ const ExperiencePage = () => {
       <main className="mt-6 mx-4">
         <h1 className="text-3xl md:text-4xl">Industry Experience</h1>
         <Steps />
-        <div className="bg-zinc-900 flex flex-row items-center justify-around p-3 md:p-4 rounded-md">
-          <p className="text sm md:text-md">View my resume 👉🏻</p>
+        <div className="bg-zinc-200 dark:bg-zinc-900 flex flex-row items-center justify-around p-3 md:p-4 rounded-md">
+          <p className="text-sm md:text-md font-semibold">View my resume 👉🏻</p>
           <a
             href="https://drive.google.com/file/d/1yCMnFhj3ea12Z0yr1oE0psJZNMe4ybBF/view"
             target="_blank"
