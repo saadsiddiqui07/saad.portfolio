@@ -54,7 +54,7 @@ const ExperiencePage = () => {
         <div className="bg-zinc-200 dark:bg-zinc-900 flex flex-row items-center justify-around p-3 md:p-4 rounded-md">
           <p className="text-sm md:text-md font-semibold">View my resume 👉🏻</p>
           <a
-            href="https://drive.google.com/file/d/1yCMnFhj3ea12Z0yr1oE0psJZNMe4ybBF/view"
+            href="https://drive.google.com/file/d/1v-letP7M-J9PwkLrt7e7BMudsfOTFbxy/view?usp=drive_link"
             target="_blank"
             download
             className="bg-white hover:opacity-75 transition-all delay-150 hover:ease-out  text-sm px-2 py-1 rounded-sm"
