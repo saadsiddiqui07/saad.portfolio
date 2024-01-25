@@ -18,10 +18,14 @@ const HeroSection = () => {
               {"<>"}
             </span>{" "}
             Hey!👋
-            <span className="font-bold bg-gradient-to-r from-red-500 via-blue-500 to-teal-500 text-transparent bg-clip-text bg-300% animate-gradient">
+            <span className="font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-blue-700 text-transparent bg-clip-text bg-300% animate-gradient">
               {" "}
               I’m Saad Siddiqui, React & React Native developer.
             </span>{" "}
+            {/* <span className="font-bold text-black  dark:text-white">
+              {" "}
+              I’m Saad Siddiqui, React & React Native developer.
+            </span>{" "} */}
             <span>I write code </span>
             <span className="text3xl dark:text-gray-400 sm:text-4xl md:text-5xl">
               {"</>"}

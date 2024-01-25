@@ -88,6 +88,47 @@ const Steps = () => {
               functionality.
             </li>
           </ul>
+          <p className="text-md font-semibold mt-4 text-gray-600 dark:text-gray-300">
+            Dreamlyzer: Dream Analysis (React Native iOS App) -{" "}
+            <a
+              href="https://apps.apple.com/in/app/dreamlyzer-dream-analysis/id6474172301"
+              target="_blank"
+              className="text-yellow-300 decoration-yellow hover:underline"
+            >
+              LIVE APP
+            </a>{" "}
+            📱
+          </p>
+          <ul className="list-disc text-md dark:text-gray-400 ">
+            <li>
+              Setup the entire project from scratch. Developing and setting up
+              the application environment single handedly.
+            </li>
+            <li>
+              Integrate audio recording functionalities for users to record
+              their dreams.
+            </li>
+            <li>
+              Successfully integrate openAI APIs to transcribe, interpret and
+              send prompts from the app.
+            </li>
+            <li>
+              Deployed cloudflare workers that connects to OpenAI via AI Gateway
+              for seamless API calls, improving the response of the API calls
+              and quick results.
+            </li>
+            <li>
+              Integrated React Native SQLite storage for efficient usage,
+              maintaining and storing it locally for better application user
+              experience.
+            </li>
+            <li>
+              Integrated React Native in-app purchases for a seamless
+              subscription model for users to subscribe to use the service.
+              Successfully integrate full fledged payment system for subscribing
+              and restoring purchase.
+            </li>
+          </ul>
         </div>
       </div>
       <div className="flex">

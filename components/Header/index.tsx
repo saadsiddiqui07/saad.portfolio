@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="flex mt-5 mx-5 sm:mx-10 md:mx-20">
       <button
-        className={`ml-auto active:border-[0.8px] p-1 rounded-md border-solid ${
+        className={`ml-auto p-1 rounded-md border-solid ${
           resolvedTheme === "dark" ? "border-gray-500" : "border-black"
         }`}
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
