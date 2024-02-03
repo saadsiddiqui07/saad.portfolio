@@ -47,7 +47,7 @@ const HeroSection = () => {
               </Link>
             </div>
             <div className="flex-1 bg-yellow-400"></div>
-            <div className="mt-8 md:mt-0 mx-0 md:mx-6 space-y-2 text-neutral-200">
+            <div className="mt-8 md:mt-0 mx-0 md:mx-6 space-y-2 text-neutral-900 dark:text-neutral-200">
               <a
                 rel="noopener noreferrer"
                 target="_blank"
