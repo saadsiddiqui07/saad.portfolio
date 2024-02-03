@@ -16,7 +16,7 @@ export default function Home() {
           <title>Saad Siddiqui | Software Developer</title>
           <link rel="icon" href="/react-logo.png" sizes="any" />
         </Head>
-        <main className="pt-5 md:pt-20">
+        <main className="md:pt-20">
           <Header />
           <HeroSection />
         </main>
