@@ -3,27 +3,32 @@ import Link from "next/link";
 import poppins from "@/styles";
 import BackIcon from "@/components/icons/BackIcon";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const videos = [
   {
     src: "/videos/headphone.mp4",
     title: "Headphones Carousel 🎧",
+    poster: "/posters/headphone-img.png",
     href: "animated-carousel",
   },
   {
     src: "/videos/ios-movies.mp4",
     title: "Movies listing 🎬",
+    poster: "/posters/movie-img.png",
     href: "movie-carousel",
   },
   {
     src: "/videos/ios-tabs.mp4",
     title: "Blur Bottom Tabs 🦄",
+    poster: "/posters/tab-img.png",
     href: "animations-example-app/blob/main/components/blur-bottomTab/main.tsx",
   },
 ];
 
 const WorkPage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const route = useRouter();
   useEffect(() => {
     // Play each video when the component mounts
     videos.forEach((video) => {
@@ -31,7 +36,7 @@ const WorkPage = () => {
         videoRef.current.play();
       }
     });
-  }, []); // Run once when component mounts
+  }, [videoRef]); // Run once when component mounts
   return (
     <div className="container px-2 py-5 md:py-10 my-10 md:px-1">
       <Head>
@@ -54,6 +59,7 @@ const WorkPage = () => {
           {videos.map((video, index) => (
             <div key={index} className="flex flex-col items-center p-1">
               <video
+                poster={video.poster}
                 ref={videoRef}
                 playsInline
                 autoPlay
