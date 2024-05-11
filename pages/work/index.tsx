@@ -197,7 +197,9 @@ const WorkPage = () => {
                     <AppstoreIcon />
                   </a>
                 ) : (
-                  <GithubIcon size={30} />
+                  <a href={app.githubURL} target="_blank">
+                    <GithubIcon size={30} />
+                  </a>
                 )}
               </a>
             </div>
