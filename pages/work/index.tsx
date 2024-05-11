@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import BackIcon from "@/components/icons/BackIcon";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import MobileDemo from "@/components/mobile-demo";
 import Image from "next/image";
 import GithubIcon from "@/components/icons/GithubIcon";
@@ -127,7 +126,7 @@ const videos = [
 
 const WorkPage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const route = useRouter();
+
   useEffect(() => {
     // Play each video when the component mounts
     videos.forEach((video) => {
@@ -191,29 +190,31 @@ const WorkPage = () => {
                   {app.title}
                 </h2>
               </div>
-              <a className="cursor-pointer">
+              <div className="cursor-pointer">
                 {app.deployed ? (
                   <a href={app.iosURL} target="_blank" rel="non-referrer">
                     <AppstoreIcon />
                   </a>
                 ) : (
-                  <a href={app.githubURL} target="_blank">
+                  <a href={app.githubURL} target="_blank" rel="non-referrer">
                     <GithubIcon size={30} />
                   </a>
                 )}
-              </a>
+              </div>
             </div>
             <div className="flex mt-2 mx-auto flex-row items-center justify-between gap-2 dark:bg-slate-800 bg-gray-200 rounded-md  px-2 py-3 overflow-x-scroll">
-              {app.images.map((img) => (
-                <Image
-                  key={img.id}
-                  src={img.iosSrc}
-                  alt={img.alt}
-                  height={100}
-                  width={200}
-                  className="rounded-md"
-                />
-              ))}
+              {app.images.map((img) => {
+                return (
+                  <Image
+                    key={img.id}
+                    src={img.iosSrc}
+                    alt={img.alt}
+                    height={100}
+                    width={200}
+                    className="rounded-md"
+                  />
+                );
+              })}
             </div>
             <h2 className="font-bold dark:text-gray-300 my-2 text-black">
               Tech Stack 🛠️

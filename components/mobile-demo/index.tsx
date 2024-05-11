@@ -56,7 +56,7 @@ const MobileDemo = ({
     <div className="flex flex-col items-center p-1 relative">
       <video
         ref={videoRef}
-        poster={poster}
+        // poster={poster}
         playsInline
         autoPlay={isPlaying}
         className="border-gray-500 dark:border-base-300 w-full rounded-3xl border-2"
@@ -66,7 +66,7 @@ const MobileDemo = ({
       </video>
       {!isPlaying && (
         <button
-          className="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-80 px-6 py-3 text-lg text-gray-800 rounded-full shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+          className="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-80 px-4 py-2 text-lg text-gray-800 rounded-full shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
           onClick={handlePlay}
         >
           <PlayIcon />
