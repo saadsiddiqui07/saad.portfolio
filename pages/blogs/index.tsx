@@ -8,6 +8,8 @@ import BlogPost from "@/components/blog-post";
 import poppins from "@/styles";
 import Seo from "@/components/seo";
 import Head from "next/head";
+import ThemeSwitchButton from "@/components/theme-button";
+import PagesHeader from "@/components/common/header";
 
 export default function BlogsPage({ blogs }: any) {
   return (
@@ -17,15 +19,7 @@ export default function BlogsPage({ blogs }: any) {
         <Head>
           <title>Saad Siddiqui | Blogs</title>
         </Head>
-        <div className="flex flex-row items-center">
-          <Link
-            href="/"
-            className="transition duration-200 ease-out hover:scale-125"
-          >
-            <BackIcon />
-          </Link>
-          <h1 className="font-bold text-xl">Back</h1>
-        </div>
+        <PagesHeader />
         <div className={`grid grid-cols-1 mb-2 md:p-0 ${poppins.className}`}>
           {blogs.map(({ slug, frontMatter, readTime }: any) => (
             <BlogPost

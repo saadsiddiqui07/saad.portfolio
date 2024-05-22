@@ -4,6 +4,8 @@ import Steps from "@/components/steps";
 import Link from "next/link";
 import { SKILLS } from "@/constants";
 import Head from "next/head";
+import ThemeSwitchButton from "@/components/theme-button";
+import PagesHeader from "@/components/common/header";
 
 const ExperiencePage = () => {
   return (
@@ -11,16 +13,7 @@ const ExperiencePage = () => {
       <Head>
         <title>Saad Siddiqui | Experience </title>
       </Head>
-      <div className="flex flex-row items-center">
-        <Link
-          href="/"
-          className="transition duration-200 ease-out hover:scale-125"
-        >
-          <BackIcon />
-        </Link>
-        <h1 className="font-bold text-xl">Back</h1>
-      </div>
-
+      <PagesHeader />
       <main className="mt-4 mx-4">
         <h1 className="text-3xl md:text-4xl">Summary</h1>
         <p className="my-1">

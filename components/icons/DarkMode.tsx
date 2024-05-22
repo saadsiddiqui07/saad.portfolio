@@ -7,7 +7,7 @@ const DarkMode = () => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      className="w-8 h-8 text-gray-800 dark:text-gray-200"
+      className="md:w-8 w-7 h-7 md:h-8 text-gray-800 dark:text-gray-200"
     >
       <path
         strokeLinecap="round"

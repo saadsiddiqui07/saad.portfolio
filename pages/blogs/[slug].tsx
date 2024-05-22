@@ -12,6 +12,7 @@ import LinkedinIcon from "@/components/icons/LinkedinIcon";
 import FacebookIcon from "@/components/icons/FacebookName";
 import readingTime from "reading-time";
 import Head from "next/head";
+import PagesHeader from "@/components/common/header";
 
 export default function BlogDetails({
   frontMatter,
@@ -49,20 +50,12 @@ export default function BlogDetails({
         description={frontMatter.metaDesc}
         url={blogURL}
       />
-      <div className="container mx-auto px-2 py-5 md:py-10 my-10 md:px-1">
+      <div className="container px-3 py-5 md:py-10 my-10 md:px-1">
         <Head>
           <title>Blogs | {frontMatter.title}</title>
         </Head>
-        <div className="flex">
-          <div
-            onClick={() => router.back()}
-            className="transition cursor-pointer duration-200 ease-out hover:scale-125"
-          >
-            <BackIcon />
-          </div>
-          <h1 className="font-bold dark:text-white text-xl">Blogs</h1>
-        </div>
-        <section className={`mx-3 mt-5 mb-2 prose dark:prose-white`}>
+        <PagesHeader />
+        <section className={`mx-3 container mt-5 mb-2 prose dark:prose-white`}>
           <h2 className="text-3xl md:text-4xl flex-1 my-1 font-bold">
             {frontMatter.title}
           </h2>

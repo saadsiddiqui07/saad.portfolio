@@ -6,6 +6,8 @@ import MobileDemo from "@/components/mobile-demo";
 import Image from "next/image";
 import GithubIcon from "@/components/icons/GithubIcon";
 import AppstoreIcon from "@/components/icons/AppstoreIcon";
+import ThemeSwitchButton from "@/components/theme-button";
+import PagesHeader from "@/components/common/header";
 
 const APPS = [
   {
@@ -137,19 +139,11 @@ const WorkPage = () => {
   }, [videoRef]); // Run once when component mounts
 
   return (
-    <div className="work  px-2 py-5 md:py-10 my-10 md:px-1">
+    <div className="work px-2 py-5 md:py-10 my-10 md:px-1">
       <Head>
-        <title>Saad Siddiqui | Experience </title>
+        <title>Saad Siddiqui | Work</title>
       </Head>
-      <div className="flex flex-row items-center">
-        <Link
-          href="/"
-          className="transition duration-200 ease-out hover:scale-125"
-        >
-          <BackIcon />
-        </Link>
-        <h1 className="font-bold text-xl">Back</h1>
-      </div>
+      <PagesHeader />
       <main className="mt-4 mx-4">
         <div className="mx-auto">
           <div className="flex flex-row items-center">
@@ -209,8 +203,8 @@ const WorkPage = () => {
                     key={img.id}
                     src={img.iosSrc}
                     alt={img.alt}
-                    height={100}
-                    width={200}
+                    height={80}
+                    width={180}
                     className="rounded-md"
                   />
                 );
