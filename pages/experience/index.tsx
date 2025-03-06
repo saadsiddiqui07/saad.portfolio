@@ -1,10 +1,7 @@
 import React from "react";
-import BackIcon from "@/components/icons/BackIcon";
 import Steps from "@/components/steps";
-import Link from "next/link";
-import { SKILLS } from "@/constants";
+import { ABOUT_ME_TEXT, SKILLS } from "@/constants";
 import Head from "next/head";
-import ThemeSwitchButton from "@/components/theme-button";
 import PagesHeader from "@/components/common/header";
 
 const ExperiencePage = () => {
@@ -17,17 +14,7 @@ const ExperiencePage = () => {
       <main className="mt-4 mx-4">
         <h1 className="text-3xl md:text-4xl">Summary</h1>
         <p className="my-1">
-          I am a proficient Javascript developer with a strong grasp of modern
-          frontend technologies with hands on industry experience in building
-          and shipping productions ready web and mobile apps with React and
-          React Native. I specialize in building dynamic and responsive user
-          interfaces, leveraging components and state management for seamless
-          user experiences. My expertise includes integrating APIs, optimizing
-          performance, and ensuring code maintainability through modular design.
-          With a passion for creating intuitive and visually appealing
-          applications, I have contributed to collaborative development teams,
-          consistently delivering high-quality code that meets user needs and
-          industry standards.
+         {ABOUT_ME_TEXT}
         </p>
       </main>
       <main className="mt-6 mx-4">

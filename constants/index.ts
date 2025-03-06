@@ -1,3 +1,5 @@
+export const ABOUT_ME_TEXT = 'I am a proficient Javascript developer with a strong grasp of modern frontend technologies with hands on industry experience in building and shipping productions ready web and mobile apps with React and React Native. I specialize in building dynamic and responsive user interfaces, leveraging components and state management for seamless user experiences. My expertise includes integrating APIs, optimizing performance, and ensuring code maintainability through modular design. With a passion for creating intuitive and visually appealing  applications, I have contributed to collaborative development teams, consistently delivering high-quality code that meets user needs and industry standards.'
+
 export const SKILLS = [
   "Javascript",
   "Typescript",
@@ -25,7 +27,7 @@ export const EXPERIENCE = [
     companyURL: "https://heisentech.com",
     role: "JavaScript Developer - React & React Native",
     startDate: "July 2022",
-    endDate: "present",
+    endDate: "July 2024",
     projects: [
       {
         id: 1,
