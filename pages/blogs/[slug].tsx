@@ -68,6 +68,7 @@ export default function BlogDetails({
           </div>
           <div>
             <div
+              className="selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black"
               dangerouslySetInnerHTML={{ __html: md().render(content) }}
             ></div>
           </div>
