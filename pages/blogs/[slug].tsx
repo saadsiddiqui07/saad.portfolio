@@ -70,7 +70,7 @@ export default function BlogDetails({
             <div
               className="selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black"
               dangerouslySetInnerHTML={{ __html: md().render(content) }}
-            ></div>
+            />
           </div>
         </section>
         <div className="mx-3">
