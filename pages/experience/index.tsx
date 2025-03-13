@@ -3,7 +3,6 @@ import Steps from "@/components/steps";
 import { ABOUT_ME_TEXT, SKILLS } from "@/constants";
 import Head from "next/head";
 import PagesHeader from "@/components/common/header";
-import Header from "@/components/Header";
 
 const ExperiencePage = () => {
   return (
