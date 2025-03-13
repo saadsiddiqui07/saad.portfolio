@@ -14,7 +14,7 @@ const HeroSection = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl my-4 text-left font-extrabold">
             Saad Siddiqui
           </h1>
-          <h5 className="text-lg font-semibold text-black dark:text-white">
+          <h5 className="text-lg font-semibold mt-2 mb-1 text-black dark:text-white">
             Software Developer at {" "}
             <a
               href="https://studiofrontier.com"
@@ -25,7 +25,7 @@ const HeroSection = () => {
               Studio Frontier
             </a>
           </h5>
-          <span className="text-md text-gray-900 dark:text-gray-400">
+          <span className="text-md text-gray-900 mt-2 sm:mt-0 dark:text-gray-400">
            Expertise in building scalable, high-performance applications with React, React Native, Next.js & typescript.
           </span>
           <div className="flex items-start md:items-center mt-20 flex-col md:flex-row">
