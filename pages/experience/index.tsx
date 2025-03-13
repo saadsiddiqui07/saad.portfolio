@@ -3,6 +3,7 @@ import Steps from "@/components/steps";
 import { ABOUT_ME_TEXT, SKILLS } from "@/constants";
 import Head from "next/head";
 import PagesHeader from "@/components/common/header";
+import Header from "@/components/Header";
 
 const ExperiencePage = () => {
   return (
@@ -33,7 +34,7 @@ const ExperiencePage = () => {
       <main className="mt-6 mx-4">
         <h1 className="text-3xl md:text-4xl">Industry Experience</h1>
         <Steps />
-        <div className="bg-zinc-200 dark:bg-zinc-900 flex flex-row items-center justify-around p-3 md:p-4 rounded-md">
+        {/* <div className="bg-zinc-200 dark:bg-zinc-900 flex flex-row items-center justify-around p-3 md:p-4 rounded-md">
           <p className="text-sm md:text-md font-semibold">View my resume 👉🏻</p>
           <a
             href="https://dub.sh/1RkePdM"
@@ -45,7 +46,7 @@ const ExperiencePage = () => {
               Resume 📄
             </span>
           </a>
-        </div>
+        </div> */}
       </main>
     </div>
   );

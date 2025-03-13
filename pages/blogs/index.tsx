@@ -3,7 +3,6 @@ import React from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import BackIcon from "@/components/icons/BackIcon";
 import BlogPost from "@/components/blog-post";
 import poppins from "@/styles";
 import Seo from "@/components/seo";

@@ -22,6 +22,59 @@ export const SKILLS = [
 ];
 
 export const EXPERIENCE = [
+ {
+    company: "Studio Frontier",
+    companyURL: "https://studiofrontier.com",
+    role: "Software Developer",
+    startDate: "July 2024",
+    endDate: "Present",
+    projects: [
+      {
+        id: 1,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Upstox",
+        status: "Production",
+        industry: "Trading and Investing",
+        techStack: [
+          "React Native",
+          "Typescript",
+          "React Native Reanimated",
+          "Storybook",
+          "Jenkins",
+        ],
+        contributions: [
+          "Built a scalable, high-performance frontend for Upstox, a widely used trading and investing platform serving millions of users across India.",
+          "Built UI components for NPS (National Pension Scheme), including BottomSheets, and fixed bugs.",
+          "Implemented deep links for NPS (in-app) and Bonds/FD (mobile to web).",
+          "Integrated dark mode across the app and UI library.",
+          "Developed and shipped an improved snackbar component (Snackbar v2), now in production.",
+          "Built a scalable, high-performance Portfolio Widget for Mutual Funds, Gold, and HomeScreen.",
+          "Added a custom patch for LineChart as per product requirements for Native Android Fix.",
+        ],
+      },
+      {
+        id: 2,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Haseed",
+        status: "Prototype",
+        industry: "Goal-based Investment",
+        techStack: [
+          "React Native",
+          "Typescript",
+          "React Native Reanimated",
+        ],
+        contributions: [
+          "Developed a prototype for Haseed, a goal-based investment app, leveraging React Native Reanimated for smooth and dynamic animations.",
+        ],
+      },
+    ],
+  },
   {
     company: "Heisentech Solutions",
     companyURL: "https://heisentech.com",
@@ -224,4 +277,5 @@ export const EXPERIENCE = [
       },
     ],
   },
+ 
 ];

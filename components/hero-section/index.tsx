@@ -11,26 +11,25 @@ import poppins from "@/styles";
 const HeroSection = () => {
   return (
     <div className={`${poppins.className}`}>
-      <div className="flex flex-col items-center justify-center mt-20 mx-5 md:mt-30 sm:mx-10 md:mx-20">
+      <div className="flex flex-col mt-20 mx-5 md:mt-30 sm:mx-10 md:mx-20">
         <div className="items-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl my-4 text-center">
-            <span className="dark:text-gray-400 text3xl sm:text-4xl md:text-5xl">
-              {"<>"}
-            </span>{" "}
-            Hey!👋
-            {/* <span className="font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-blue-700 text-transparent bg-clip-text bg-300% animate-gradient">
-              {" "}
-              I’m Saad, React Native developer.
-            </span>{" "} */}
-            <span className="font-extrabold text-gray-900  dark:text-white">
-              {" "}
-              I’m Saad, React Native developer.
-            </span>{" "}
-            <span>I build apps📱</span>
-            <span className="text3xl dark:text-gray-400 sm:text-4xl md:text-5xl">
-              {"</>"}
-            </span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl my-4 text-left font-extrabold">
+            Saad Siddiqui
           </h1>
+          <h5 className="text-lg font-semibold text-black dark:text-white">
+            Software Developer at {" "}
+            <a
+              href="https://studiofrontier.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-black dark:text-white"
+            >
+              Studio Frontier
+            </a>
+          </h5>
+          <span className="text-md text-gray-900 dark:text-gray-400">
+           Expertise in building scalable, high-performance applications with React, React Native, Next.js & typescript.
+          </span>
           <div className="flex items-start md:items-center mt-20 flex-col md:flex-row">
             <div className="mt-8 md:mt-0 mx-0 md:mx-6 space-y-2 dark:text-white">
               <Link className="flex items-center" href="/blogs">

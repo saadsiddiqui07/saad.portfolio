@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import BackIcon from "@/components/icons/BackIcon";
-import { useRouter } from "next/router";
 import fs from "fs";
 import md from "markdown-it";
 import matter from "gray-matter";
@@ -20,7 +19,6 @@ export default function BlogDetails({
   slug,
   readTime,
 }: any) {
-  const router = useRouter();
   const blogURL = `https://saad-dev.vercel.app/blogs/${slug}`;
 
   const handleShare = (medium: "twitter" | "facebook" | "linkedin") => {

@@ -1,17 +1,17 @@
 import Link from "next/link";
 import BackIcon from "../icons/BackIcon";
 import ThemeSwitchButton from "../theme-button";
+import {ArrowLeftIcon} from 'lucide-react'
 
 export default function PagesHeader() {
   return (
     <div className="flex flex-row items-center">
       <Link
         href="/"
-        className="transition duration-200 ease-out hover:scale-125"
+        className="mr-2"
       >
-        <BackIcon />
+        <ArrowLeftIcon />
       </Link>
-      <h1 className="font-bold text-xl">Back</h1>
       <ThemeSwitchButton />
     </div>
   );
