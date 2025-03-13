@@ -6,8 +6,6 @@ import GithubIcon from "../icons/GithubIcon";
 import LinkedinIcon from "../icons/LinkedinIcon";
 import poppins from "@/styles";
 
-// dark:from-blue-300 dark:via-teal-300 dark:to-indigo-300
-
 const HeroSection = () => {
   return (
     <div className={`${poppins.className}`}>

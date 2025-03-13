@@ -2,11 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/hero-section";
 import Head from "next/head";
 
-//   className="flex-1  w-full h-screen bg-gradient-to-r
-// dark:from-gray-900
-// dark:via-gray-800
-// dark:to-neutral-900
-// background-animate"
 
 export default function Home() {
   return (

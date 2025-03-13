@@ -1,5 +1,4 @@
 import Link from "next/link";
-import BackIcon from "../icons/BackIcon";
 import ThemeSwitchButton from "../theme-button";
 import {ArrowLeftIcon} from 'lucide-react'
 
