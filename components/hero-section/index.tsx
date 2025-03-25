@@ -26,7 +26,7 @@ const HeroSection = () => {
             </a>
           </h5>
           <span className="text-md text-gray-900 mt-2 sm:mt-0 dark:text-gray-400">
-           Expertise in building scalable, high-performance applications with React, React Native, Next.js & typescript.
+           Expertise in building scalable, high-performance applications for web and mobile.
           </span>
           <div className="flex items-start md:items-center mt-20 flex-col md:flex-row">
             <div className="mt-8 md:mt-0 mx-0 md:mx-6 space-y-2 dark:text-white">
@@ -56,7 +56,7 @@ const HeroSection = () => {
                 className="flex items-center gap-2"
               >
                 <TwitterIcon />
-                <span className="font-bold">Follow me on Twitter</span>
+                <span className="font-bold">Twitter</span>
               </a>
               <a
                 rel="noopener noreferrer"
@@ -65,7 +65,7 @@ const HeroSection = () => {
                 className="flex items-center gap-2"
               >
                 <GithubIcon />
-                <span className="font-bold">My Github</span>
+                <span className="font-bold">Github</span>
               </a>
               <a
                 rel="noopener noreferrer"
