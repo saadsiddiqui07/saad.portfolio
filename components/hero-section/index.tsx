@@ -13,14 +13,14 @@ const HeroSection = () => {
             {PORTFOLIO.title}
           </h1>
           <h5 className="text-lg font-semibold mt-2 mb-1 text-black dark:text-white">
-            {PORTFOLIO.company.role} at{" "}
+            {PORTFOLIO.company.role}
             <a
               href={PORTFOLIO.company.link}
               target="_blank"
               rel="noopener noreferrer"
               className="underline text-black dark:text-white"
             >
-              {PORTFOLIO.company.name}
+              {/* {PORTFOLIO.company.name} */}
             </a>
           </h5>
           <span className="text-md text-gray-900 mt-2 sm:mt-0 dark:text-gray-400">

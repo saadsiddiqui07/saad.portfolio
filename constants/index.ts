@@ -1,4 +1,5 @@
-export const ABOUT_ME_TEXT = 'I am a proficient Javascript developer with a strong grasp of modern frontend technologies with hands on industry experience in building and shipping productions ready web and mobile apps with React and React Native. I specialize in building dynamic and responsive user interfaces, leveraging components and state management for seamless user experiences. My expertise includes integrating APIs, optimizing performance, and ensuring code maintainability through modular design. With a passion for creating intuitive and visually appealing  applications, I have contributed to collaborative development teams, consistently delivering high-quality code that meets user needs and industry standards.'
+export const ABOUT_ME_TEXT = 'Proficient Software Developer with a strong grasp of modern frontend technologies and hands-on industry experience in building and shipping production-ready web and mobile apps using React, React Native, and Swift. I specialize in creating dynamic and responsive user interfaces, leveraging component-driven architecture and efficient state management to deliver seamless user experiences across platforms. My expertise extends to integrating APIs, optimizing performance, and ensuring code maintainability through modular design principles. I have experience developing rapid prototypes, working with AI tools like Cursor AI, and building apps natively in Swift. With a passion for crafting intuitive and visually engaging applications, I’ve contributed to collaborative teams, consistently delivering high-quality, scalable solutions that meet user needs and industry standards.'
+
 
 export const SKILLS = [
   "Javascript",
@@ -22,7 +23,7 @@ export const SKILLS = [
 ];
 
 export const EXPERIENCE = [
- {
+  {
     company: "Studio Frontier",
     companyURL: "https://studiofrontier.com",
     role: "Software Developer",
@@ -64,13 +65,57 @@ export const EXPERIENCE = [
         name: "Haseed",
         status: "Prototype",
         industry: "Goal-based Investment",
-        techStack: [
-          "React Native",
-          "Typescript",
-          "React Native Reanimated",
-        ],
+        techStack: ["React Native", "Typescript", "React Native Reanimated"],
         contributions: [
           "Developed a prototype for Haseed, a goal-based investment app, leveraging React Native Reanimated for smooth and dynamic animations.",
+        ],
+      },
+      {
+        id: 3,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Synapse (Web App)",
+        status: "Prototype",
+        industry: "IRS Trading Platform",
+        techStack: ["Next.js", "Typescript", "shadcn/ui", "Tailwind CSS"],
+        contributions: [
+          "Built complex, responsive UI tables and screens using shadcn and Tailwind CSS.",
+          "Engineered frontend architecture for a robust IRS trading web platform prototype.",
+          "Implemented modular, reusable components with clean state management.",
+        ],
+      },
+      {
+        id: 4,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Confx",
+        status: "Beta Mode",
+        industry: "Events and Discovery",
+        techStack: ["React Native", "Typescript", "NativeWind"],
+        contributions: [
+          "Developed the entire mobile app UI for iOS and Android using NativeWind and React Native.",
+          "Built screens and reusable components with a focus on performance and UX.",
+          "Integrated event discovery, favorites, and authentication features.",
+        ],
+      },
+      {
+        id: 5,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Echovaren",
+        status: "Prototype",
+        industry: "Voice Notes",
+        techStack: ["Swift", "Cursor AI"],
+        contributions: [
+          "Built a prototype iOS app inspired by voicenotes.com using Swift and Cursor AI.",
+          "Implemented voice recording, transcription, and simple note management features.",
+          "Focused on performance, intuitive UX, and minimal design for quick note capture.",
         ],
       },
     ],
@@ -277,5 +322,4 @@ export const EXPERIENCE = [
       },
     ],
   },
- 
 ];
