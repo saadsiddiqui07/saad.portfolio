@@ -78,11 +78,11 @@ export const EXPERIENCE = [
         appURL: "",
         name: "Synapse (Web App)",
         status: "Prototype",
-        industry: "IRS Trading Platform",
+        industry: "Stealth Fintech",
         techStack: ["Next.js", "Typescript", "shadcn/ui", "Tailwind CSS"],
         contributions: [
           "Built complex, responsive UI tables and screens using shadcn and Tailwind CSS.",
-          "Engineered frontend architecture for a robust IRS trading web platform prototype.",
+        "Engineered frontend architecture for a robust derivates trading web platform prototype.",
           "Implemented modular, reusable components with clean state management.",
         ],
       },
