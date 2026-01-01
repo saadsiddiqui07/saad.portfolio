@@ -43,6 +43,7 @@ const MobileDemo = ({
   href: string;
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlay = () => {
@@ -52,26 +53,38 @@ const MobileDemo = ({
     }
   };
 
+  const handleLoadedData = () => {
+    setIsLoaded(true);
+  };
+
   return (
     <div className="flex flex-col items-center p-1 relative">
-      <video
-        ref={videoRef}
-        // poster={poster}
-        playsInline
-        autoPlay={isPlaying}
-        className="border-gray-500 dark:border-base-300 w-full rounded-3xl border-2"
-        loop
-      >
-        <source type="video/mp4" src={src} />
-      </video>
-      {!isPlaying && (
-        <button
-          className="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-80 px-4 py-2 text-lg text-gray-800 rounded-full shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
-          onClick={handlePlay}
+      <div className="relative border-gray-500 dark:border-base-300 w-full rounded-3xl border-2">
+        {!isLoaded && (
+          <div className="absolute inset-0 bg-gray-300 dark:bg-slate-700 rounded-3xl animate-pulse flex items-center justify-center aspect-video">
+            <div className="w-full h-full bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 dark:from-slate-700 dark:via-slate-600 dark:to-slate-700 rounded-3xl animate-shimmer"></div>
+          </div>
+        )}
+        <video
+          ref={videoRef}
+          // poster={poster}
+          playsInline
+          autoPlay={isPlaying}
+          onLoadedData={handleLoadedData}
+          className={`w-full rounded-3xl ${!isLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+          loop
         >
-          <PlayIcon />
-        </button>
-      )}
+          <source type="video/mp4" src={src} />
+        </video>
+        {!isPlaying && (
+          <button
+            className="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-80 px-4 py-2 text-lg text-gray-800 rounded-full shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg z-10"
+            onClick={handlePlay}
+          >
+            <PlayIcon />
+          </button>
+        )}
+      </div>
       <a target="_blank" href={`https://github.com/saadsiddiqui07/${href}`}>
         <small
           className={`${poppins.className} font-bold md:mt-1 hover:underline`}

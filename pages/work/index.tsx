@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import BackIcon from "@/components/icons/BackIcon";
 import Head from "next/head";
@@ -145,6 +145,36 @@ const googlePayVideos = [
   },
 ];
 
+const VideoWithSkeleton = ({ src }: { src: string }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleLoadedData = () => {
+    setIsLoaded(true);
+  };
+
+  return (
+    <div className="relative border-gray-500 dark:border-base-300 rounded-3xl border-2 h-auto w-full max-w-[180px]">
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-300 dark:bg-slate-700 rounded-3xl animate-pulse flex items-center justify-center">
+          <div className="w-full h-full bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 dark:from-slate-700 dark:via-slate-600 dark:to-slate-700 rounded-3xl animate-shimmer"></div>
+        </div>
+      )}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        playsInline
+        muted
+        onLoadedData={handleLoadedData}
+        className={`rounded-3xl h-auto w-full max-w-[180px] ${!isLoaded ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+    </div>
+  );
+};
+
 const WorkPage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -186,16 +216,7 @@ const WorkPage = () => {
             </div>
             <div className="flex mt-2 mx-auto flex-row items-center justify-between gap-2 dark:bg-slate-800 bg-gray-200 rounded-md px-2 py-3 overflow-x-scroll">
               {googlePayVideos.map((video, index) => (
-                <video
-                  key={index}
-                  autoPlay
-                  loop
-                  playsInline
-                  muted
-                  className="border-gray-500 dark:border-base-300 rounded-3xl border-2 h-auto w-full max-w-[180px]"
-                >
-                  <source src={video.src} type="video/mp4" />
-                </video>
+                <VideoWithSkeleton key={index} src={video.src} />
               ))}
             </div>
             <div>
