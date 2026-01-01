@@ -126,6 +126,25 @@ const videos = [
   },
 ];
 
+const googlePayVideos = [
+  {
+    src: "/google-pay/home.mp4",
+    title: "Home Screen",
+  },
+  {
+    src: "/google-pay/payment.mp4",
+    title: "Payment Screen",
+  },
+  {
+    src: "/google-pay/money-tab.mp4",
+    title: "Money Tab",
+  },
+  {
+    src: "/google-pay/profile-tab.mp4",
+    title: "Profile Tab",
+  },
+];
+
 const WorkPage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -144,6 +163,73 @@ const WorkPage = () => {
         <title>Saad Siddiqui | Work</title>
       </Head>
       <PagesHeader />
+      {/* FIRST SECTION - React Native AI Apps */}
+      <main className="mt-4 mx-4">
+        <div className="">
+          <h1 className="text-xl dark:text-[#94a3b8] text-[#1e293b] font-bold md:text-2xl lg:text-3xl">
+            React Native AI Apps 🤖
+          </h1>
+          <div className="mt-5 mb-10 md:mb-14">
+            <div className="flex flex-row items-center justify-between">
+              <h2 className="text-md md:text-xl lg:text-2xl dark:text-white text-slate-800 font-bold">
+                Google Pay UI
+              </h2>
+              <div className="cursor-pointer">
+                <a
+                  href="https://github.com/saadsiddiqui07/google-pay-ui"
+                  target="_blank"
+                  rel="non-referrer"
+                >
+                  <GithubIcon size={30} />
+                </a>
+              </div>
+            </div>
+            <div className="flex mt-2 mx-auto flex-row items-center justify-between gap-2 dark:bg-slate-800 bg-gray-200 rounded-md px-2 py-3 overflow-x-scroll">
+              {googlePayVideos.map((video, index) => (
+                <video
+                  key={index}
+                  autoPlay
+                  loop
+                  playsInline
+                  muted
+                  className="border-gray-500 dark:border-base-300 rounded-3xl border-2 h-auto w-full max-w-[180px]"
+                >
+                  <source src={video.src} type="video/mp4" />
+                </video>
+              ))}
+            </div>
+            <div>
+              <p className="my-2">
+                Built this entire UI with AI using just a few prompts, powered by{" "}
+                <a
+                  target="_blank"
+                  href="https://www.trae.ai/"
+                  className="font-bold hover:underline cursor-pointer text-teal-400"
+                >
+                  TRAE AI Editor
+                </a>
+                . The interface leverages{" "}
+                <a
+                  target="_blank"
+                  href="https://callstack.github.io/react-native-paper"
+                  className="font-bold hover:underline cursor-pointer text-blue-400"
+                >
+                  React Native Paper
+                </a>
+                {" "}for Material Design components and{" "}
+                <a
+                  target="_blank"
+                  href="https://gorhom.dev/react-native-bottom-sheet/"
+                  className="font-bold hover:underline cursor-pointer text-purple-400"
+                >
+                  Gorhom Bottom Sheet
+                </a>
+                {" "}for smooth, interactive bottom sheet experiences. This project demonstrates the power of AI-assisted development in creating polished, production-ready mobile interfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
       <main className="mt-4 mx-4">
         <div className="mx-auto">
           <div className="flex flex-row items-center">
