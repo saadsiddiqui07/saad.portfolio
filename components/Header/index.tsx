@@ -14,43 +14,6 @@ const Header = () => {
         <span className="text-3xl font-bold text-black dark:text-white">S</span>
       </Link>
 
-      <nav
-        className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800 dark:text-gray-200"
-        aria-label="Primary"
-      >
-        <Link href="/#case-studies" className="hover:underline">
-          Case Studies
-        </Link>
-        <Link href="/#writing" className="hover:underline">
-          Writing
-        </Link>
-        <Link href="/work" className="hover:underline">
-          Portfolio
-        </Link>
-        <Link href="/experience" className="hover:underline">
-          Experience
-        </Link>
-        <a
-          href="https://www.linkedin.com/in/saad-siddiqui-0867391a3/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/saadsiddiqui07"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-        >
-          GitHub
-        </a>
-        <Link href="/resume" className="hover:underline">
-          Resume
-        </Link>
-      </nav>
-
       <div className="flex items-center gap-3">
         <ThemeSwitchButton />
       </div>

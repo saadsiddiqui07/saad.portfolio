@@ -20,15 +20,15 @@ const HeroSection = () => {
         >
           {PORTFOLIO.headline}
         </h1>
-        <p className="mt-4 text-base sm:text-lg text-gray-900 dark:text-gray-300 max-w-2xl">
+        <p className="mt-4 text-base sm:text-lg text-gray-900 dark:text-gray-500 max-w-2xl">
           {PORTFOLIO.subheadline}
         </p>
-        <p className="mt-3 text-sm sm:text-base text-gray-800 dark:text-gray-400">
+        {/* <p className="mt-3 text-sm sm:text-base text-gray-800 dark:text-gray-300">
           {PORTFOLIO.expertise}
-        </p>
+        </p> */}
       </div>
 
-      <div className="mt-10 flex flex-col md:flex-row md:items-start gap-10">
+      <div className="mt-10 flex flex-col md:flex-row md:items-start gap-1 justify-between">
         <div className="space-y-3 md:space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-500">
             Portfolio
@@ -36,7 +36,7 @@ const HeroSection = () => {
           {PORTFOLIO.links.map((link, index) => (
             <Link
               key={index}
-              className="inline-flex items-center gap-2 text-sm sm:text-base text-black dark:text-white hover:underline"
+              className="flex flex-row items-center gap-1 text-sm sm:text-base text-black dark:text-white hover:underline"
               href={link.link}
             >
               <ArrowRight />
@@ -45,7 +45,7 @@ const HeroSection = () => {
           ))}
         </div>
 
-        <div className="hidden md:block h-px flex-1 self-stretch bg-gradient-to-r from-yellow-400/70 via-yellow-400 to-yellow-400/70 md:h-32 md:w-px md:bg-gradient-to-b" />
+        {/* <div className="hidden md:block h-px flex-1 self-stretch bg-gradient-to-r from-yellow-400/70 via-yellow-400 to-yellow-400/70 md:h-32 md:w-px md:bg-gradient-to-b" /> */}
 
         <div className="space-y-3 md:space-y-2 text-neutral-900 dark:text-neutral-200">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-500">
