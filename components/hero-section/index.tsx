@@ -32,7 +32,7 @@ const HeroSection = () => {
       </div>
 
       <div className="mt-10 flex flex-col md:flex-row md:items-start gap-1 justify-between">
-        <div className="space-y-3 md:space-y-2">
+        <div className="space-y-3 md:space-y-2 mb-4 md:mb-0">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-500">
             Portfolio
           </p>
