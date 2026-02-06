@@ -3,8 +3,11 @@ import ArrowRight from "../icons/ArrowRight";
 import Link from "next/link";
 import poppins from "@/styles";
 import { PORTFOLIO } from "@/data";
+import useSmoothScroll from "@/hooks/useSmoothScroll";
 
 const HeroSection = () => {
+  useSmoothScroll();
+
   return (
     <section
       className={`${poppins.className} mt-16 md:mt-24 mx-5 sm:mx-10 md:mx-20`}

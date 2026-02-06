@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import Header from "../Header";
+import Footer from "../footer";
 
 interface Props {
   children: React.ReactNode;
