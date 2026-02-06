@@ -19,7 +19,7 @@ export default function Home() {
         <HeroSection />
         <CaseStudies />
         <WritingSection />
-        <GithubSection />
+        {/* <GithubSection /> */}
       </main>
     </div>
   );

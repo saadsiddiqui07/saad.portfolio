@@ -5,7 +5,7 @@ const WritingSection = () => {
   return (
     <section
       id="writing"
-      className={`${poppins.className} mt-20 mx-5 sm:mx-10 md:mx-20 space-y-10`}
+      className="mt-20 mx-5 sm:mx-10 md:mx-20 space-y-10"
       aria-labelledby="writing-heading"
     >
       <header className="space-y-2">

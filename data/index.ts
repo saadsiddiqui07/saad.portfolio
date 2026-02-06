@@ -6,7 +6,7 @@ export const PORTFOLIO = {
   name: "Saad Siddiqui",
   headline: "Frontend Engineer building AI & Fintech products with React and React Native",
   subheadline:
-    "I design and ship performance-focused interfaces with clean architecture, reusable components, and product-first thinking — from trading dashboards to AI-powered mobile apps.",
+    "I design and ship performance-focused interfaces with clean architecture, reusable components, and product-first thinking from trading dashboards to AI-powered mobile apps.",
   expertise:
     "Frontend engineer focused on scalable, high-performance web and mobile experiences using React, React Native, and Next.js.",
   company: {
@@ -63,6 +63,7 @@ export const CASE_STUDIES = {
       id: "upstox",
       title: "Upstox – UI Library & Dark Mode",
       tags: "React Native · Trading & Investing · Design System · Dark Mode",
+      appStoreURL: "https://apps.apple.com/vn/app/upstox-demat-stock-mf-ipo/id1584953620",
       sections: [
         {
           heading: "Problem",
@@ -141,118 +142,114 @@ export const CASE_STUDIES = {
             "The shared UI library and dark-mode-ready components made it easier for the team to ship new features without reinventing basic building blocks. It also reduced visual inconsistency across trading, NPS, and portfolio experiences, and made long trading sessions more comfortable for users who prefer dark mode.",
         },
       ],
-      aside: {
-        screenshots: {
-          title: "UI Library Screenshots (placeholder)",
-          description:
-            "This area will showcase representative screens from the Upstox UI library: bottom sheets, NPS flows, snackbars, and portfolio widgets in light and dark mode.",
-        },
-        notes: {
-          title: "Notes for reviewers",
-          description:
-            "I'm happy to walk through how these components are structured and how we integrated them into existing product flows during a technical conversation.",
-        },
-      },
     },
     {
-      id: "ai-voice-notes",
-      title: "AI Voice Notes App – OpenAI-powered Mobile App",
-      tags: "React Native / Swift · OpenAI · Local Storage · Offline-first UX",
+      id: "dreamlyzer-app",
+      title: "Dreamlyzer App – AI-powered Dream Analysis",
+      tags: "React Native · OpenAI · In-app Purchases · Offline-first UX",
+      appStoreURL: "https://apps.apple.com/in/app/dreamlyzer-dream-analysis/id6474172301",
       sections: [
         {
           heading: "Problem",
           content:
-            "Raw voice recordings are hard to revisit and even harder to turn into actionable notes. The goal was to turn unstructured audio into concise insights, summaries, and follow-ups without forcing users to manually tag or organize everything.",
+            "Users want to understand their dreams, but dream interpretation is subjective and often requires a guide. The goal was to create a mobile app that uses AI to provide personalized, insightful dream analysis in a private, user-friendly interface.",
         },
         {
           heading: "How OpenAI was integrated",
           content:
-            "I integrated OpenAI APIs to transform transcripts into structured outputs such as summaries, key points, and suggested tags. The mobile app handled:",
+            "I integrated the OpenAI API to transform user-written dream descriptions into structured, analytical content. The React Native app managed:",
           list: [
             {
-              text: "Sending trimmed, user-approved transcripts to the API.",
+              text: "Sending user-provided dream text to the API for analysis.",
             },
             {
-              text: "Mapping model responses into a normalized internal format (e.g. summary, action_items, topics).",
+              text: "Parsing the model's response, which included themes, emotional tone, and potential interpretations.",
             },
             {
-              text: "Persisting results alongside the original recording so users could always fall back to the raw audio.",
+              text: "Displaying the AI-generated analysis in a clear, readable format within the app.",
+            },
+            {
+              text: "Storing the analysis alongside the original dream entry for future reference.",
             },
           ],
         },
         {
           heading: "Prompt design and response validation",
           content:
-            "I iterated on prompts to keep responses deterministic enough for a production UI. Prompts emphasized:",
+            "I designed and refined prompts to ensure the AI's responses were consistent, helpful, and safe for users. The prompts were engineered to:",
           list: [
             {
-              text: "Returning stable JSON structures instead of free-form prose.",
+              text: "Return structured JSON data for easy parsing and display.",
             },
             {
-              text: "Keeping outputs concise so they fit naturally into mobile layouts and cards.",
+              text: "Maintain a supportive and non-judgmental tone.",
             },
             {
-              text: "Handling incomplete or noisy input (short notes, background noise, partial thoughts) without throwing errors.",
+              text: "Handle a wide range of dream content gracefully, avoiding overly speculative or alarming interpretations.",
             },
           ],
           footer:
-            "On the client, I validated responses before updating state, with fallbacks for malformed or partial data so that the app never left the user in a broken state.",
+            "The app included client-side validation to handle any unexpected API responses, ensuring a stable user experience.",
         },
         {
           heading: "Mobile UX challenges with AI",
           content:
-            "AI on mobile introduces latency, connectivity issues, and the possibility of errors outside the user's control. I designed around this by:",
+            "The app needed to feel responsive and reliable, even with the potential for network latency and API errors. I addressed this by:",
           list: [
             {
-              text: "Showing optimistic UI states with skeletons and clear \"processing\" indicators while waiting for OpenAI.",
+              text: "Implementing loading states and skeleton screens to provide immediate feedback while waiting for the AI's response.",
             },
             {
-              text: "Allowing users to continue browsing older notes while a new transcription/analysis was in progress.",
+              text: "Allowing users to browse their past dreams while a new analysis was in progress.",
             },
             {
-              text: "Surfacing recoverable errors with helpful copy (e.g. network issues, expired keys) and retry actions instead of generic alerts.",
+              text: "Providing clear error messages and retry options for issues like network failures or API timeouts.",
             },
           ],
         },
         {
           heading: "State management and local storage",
           content:
-            "I used local storage (SQLite on React Native, persistent storage on iOS) to keep recordings and AI outputs available offline. The state layer distinguished between:",
+            "I used local storage to ensure that users' dream entries and analyses were available offline. The state management system differentiated between:",
           list: [
             {
-              label: "Local-only drafts",
-              text: "that had not yet been sent to the API.",
+              label: "Local drafts",
+              text: "that had not yet been sent for analysis.",
             },
             {
-              label: "Synced notes",
-              text: "with confirmed AI analysis.",
+              label: "Synced dreams",
+              text: "with a completed AI analysis.",
             },
             {
-              label: "Failed or pending jobs",
-              text: "that needed retries.",
+              label: "Pending or failed requests",
+              text: "that could be retried.",
             },
           ],
           footer:
-            "This separation kept the UI responsive even when network conditions were poor and made it easy to resume processing later without losing data.",
+            "This offline-first approach ensured the app remained functional and responsive, regardless of network connectivity.",
+        },
+        {
+          heading: "In-App Purchases and Monetization",
+          content:
+            "To support the app, I integrated a monetization model using in-app purchases. This involved:",
+          list: [
+            {
+              text: "Implementing a credit-based system where users could purchase packs of dream analyses.",
+            },
+            {
+              text: "Using RevenueCat to manage in-app purchases and subscriptions, simplifying the process for both iOS and Android.",
+            },
+            {
+              text: "Creating a user-friendly paywall and purchase flow.",
+            },
+          ],
         },
         {
           heading: "What I learned",
           content:
-            "Building AI-first mobile experiences reinforced the importance of defensive UI design: treating AI as a best-effort enhancement on top of a solid core product, not as a single point of failure. It also pushed me to think carefully about latency, background work, and how to communicate uncertainty to users without overwhelming them.",
+            "Building an AI-powered mobile app taught me the importance of designing for uncertainty. It's crucial to treat the AI as a powerful but fallible part of the system. This project also deepened my skills in mobile UX, state management, and monetization strategies for consumer-facing apps.",
         },
       ],
-      aside: {
-        demo: {
-          title: "Demo / media placeholder",
-          description:
-            "This block is reserved for a short demo video or screen recording of the AI voice notes flow: recording, transcription, analysis, and organizing notes.",
-        },
-        notes: {
-          title: "Implementation notes",
-          description:
-            "Happy to dive into the exact state management patterns and retry logic used for OpenAI calls in a technical discussion.",
-        },
-      },
     },
     {
       id: "fintech-trading-ui",
