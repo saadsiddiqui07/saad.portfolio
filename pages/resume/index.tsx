@@ -1,5 +1,6 @@
 import Head from "next/head";
 import PagesHeader from "@/components/common/header";
+import { Link } from "lucide-react";
 
 export default function ResumePage() {
   return (
@@ -22,17 +23,17 @@ export default function ResumePage() {
         </p>
         <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
           In the meantime, you can quickly evaluate my work through the{" "}
-          <a href="/#case-studies" className="underline">
+          <Link href="/#case-studies" className="underline">
             case studies
-          </a>
+          </Link>
           ,{" "}
-          <a href="/#writing" className="underline">
+          <Link href="/#writing" className="underline">
             writing samples
-          </a>
+          </Link>
           , and{" "}
-          <a href="/work" className="underline">
+          <Link href="/work" className="underline">
             selected projects
-          </a>{" "}
+          </Link>{" "}
           linked on the home page.
         </p>
       </section>
