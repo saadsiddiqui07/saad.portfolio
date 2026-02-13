@@ -15,7 +15,7 @@ const HeroSection = () => {
     >
       <div className="max-w-4xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-600 dark:text-gray-400">
-          {PORTFOLIO.name} · {PORTFOLIO.company.role}
+          {PORTFOLIO.name} 
         </p>
         <h1
           id="hero-heading"
