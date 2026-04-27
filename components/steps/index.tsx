@@ -1,6 +1,7 @@
 import React from "react";
 import CodeIcon from "../icons/CodeIcon";
 import { EXPERIENCE } from "@/constants";
+import Image from "next/image";
 
 const Steps = () => {
   return (
@@ -8,11 +9,23 @@ const Steps = () => {
       {EXPERIENCE.map((exp, index) => (
         <div key={index} className="flex">
           <div className="flex flex-col items-center mr-4">
-            <div className="mt-2 mb-1">
-              <div className="flex items-center bg-blue-500 justify-center w-10 h-10 rounded-full">
-                <CodeIcon />
+            {exp.logo ? (
+              <div className="mt-3">
+                <Image
+                  src={exp.logo!}
+                  objectFit="cover"
+                  height={48}
+                  width={48}
+                  alt={`${exp.company} logo`}
+                />
               </div>
-            </div>
+            ) : (
+              <div className="mt-2 mb-1">
+                <div className="flex items-center bg-blue-500 justify-center w-10 h-10 rounded-full">
+                  <CodeIcon />
+                </div>
+              </div>
+            )}
             <div className="w-[1.5px] h-full bg-gray-300 dark:bg-gray-600" />
           </div>
           <div className="pt-1 pb-8 mt-2">
@@ -28,7 +41,7 @@ const Steps = () => {
               {exp.startDate} -- {exp.endDate}
             </p>
             <p className="text-xl font-semibold mt-2 mb-1 italic">{exp.role}</p>
-            {exp.projects.map((project, index) => (
+            {exp.projects?.map((project, index) => (
               <>
                 <p className="text-lg font-extrabold mt-8 text-gray-500 dark:text-gray-300">
                   {project.name}{" "}

@@ -4,15 +4,15 @@ import LinkedinIcon from "../components/icons/LinkedinIcon";
 
 export const PORTFOLIO = {
   name: "Saad Siddiqui",
-  headline: "Frontend Engineer building AI & Fintech products with React and React Native",
+  headline: "Frontend Engineer building AI products with React Native",
   subheadline:
     "I design and ship performance-focused interfaces with clean architecture, reusable components, and product-first thinking from trading dashboards to AI-powered mobile apps.",
   expertise:
     "Frontend engineer focused on scalable, high-performance web and mobile experiences using React, React Native, and Next.js.",
   company: {
-    role: "Software Developer",
-    name: "Studio Frontier",
-    link: "https://studiofrontier.com",
+    role: "Senior Software Engineer II",
+    name: "Geekyants",
+    link: "https://geekyants.com",
   },
   links: [
     {

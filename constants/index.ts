@@ -1,3 +1,5 @@
+import { Experience } from "@/types";
+
 export const ABOUT_ME_TEXT =
   "Frontend engineer focused on React, React Native, and Next.js, with hands-on experience shipping production trading UIs, AI-powered mobile apps, and SaaS dashboards. I care about clean architecture, reusable components, and performance — especially in products where reliability and clarity matter, like fintech and productivity tools. I’m comfortable working across design systems, state management, and API integration, and I like to think in terms of real user workflows rather than isolated screens. Most of my work has been on small teams where engineering decisions directly shape the product, roadmap, and developer experience.";
 
@@ -23,13 +25,112 @@ export const SKILLS = [
   "Android Studio",
 ];
 
-export const EXPERIENCE = [
+export const EXPERIENCE: Experience[] = [
+  {
+    company: "Geekyants",
+    companyURL: "https://geekyants.com",
+    logo: '/logo/geekyants-logo.jpeg',
+    role: "Senior Software Engineer 2", 
+    startDate: "April 2026",
+    endDate: "Present",
+     projects: [
+      {
+        id: 1,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Upstox",
+        status: "Production",
+        industry: "Trading and Investing",
+        techStack: [
+          "React Native",
+          "Typescript",
+          "React Native Reanimated",
+          "Storybook",
+          "Jenkins",
+        ],
+        contributions: [
+          "Built a scalable, high-performance frontend for Upstox, a widely used trading and investing platform serving millions of users across India.",
+          "Built UI components for NPS (National Pension Scheme), including BottomSheets, and fixed bugs.",
+          "Implemented deep links for NPS (in-app) and Bonds/FD (mobile to web).",
+          "Integrated dark mode across the app and UI library.",
+          "Developed and shipped an improved snackbar component (Snackbar v2), now in production.",
+          "Built a scalable, high-performance Portfolio Widget for Mutual Funds, Gold, and HomeScreen.",
+          "Added a custom patch for LineChart as per product requirements for Native Android Fix.",
+        ],
+      },
+      {
+        id: 2,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Haseed",
+        status: "Prototype",
+        industry: "Goal-based Investment",
+        techStack: ["React Native", "Typescript", "React Native Reanimated"],
+        contributions: [
+          "Developed a prototype for Haseed, a goal-based investment app, leveraging React Native Reanimated for smooth and dynamic animations.",
+        ],
+      },
+      {
+        id: 3,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Synapse (Web App)",
+        status: "Prototype",
+        industry: "Stealth Fintech",
+        techStack: ["Next.js", "Typescript", "shadcn/ui", "Tailwind CSS"],
+        contributions: [
+          "Built complex, responsive UI tables and screens using shadcn and Tailwind CSS.",
+        "Engineered frontend architecture for a robust derivates trading web platform prototype.",
+          "Implemented modular, reusable components with clean state management.",
+        ],
+      },
+      {
+        id: 4,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Confx",
+        status: "Beta Mode",
+        industry: "Events and Discovery",
+        techStack: ["React Native", "Typescript", "NativeWind"],
+        contributions: [
+          "Developed the entire mobile app UI for iOS and Android using NativeWind and React Native.",
+          "Built screens and reusable components with a focus on performance and UX.",
+          "Integrated event discovery, favorites, and authentication features.",
+        ],
+      },
+      {
+        id: 5,
+        isLive: false,
+        isWebLive: false,
+        webURL: "",
+        appURL: "",
+        name: "Echovaren",
+        status: "Prototype",
+        industry: "Voice Notes",
+        techStack: ["Swift", "Cursor AI"],
+        contributions: [
+          "Built a prototype iOS app inspired by voicenotes.com using Swift and Cursor AI.",
+          "Implemented voice recording, transcription, and simple note management features.",
+          "Focused on performance, intuitive UX, and minimal design for quick note capture.",
+        ],
+      },
+    ],
+  },
   {
     company: "Studio Frontier",
     companyURL: "https://studiofrontier.com",
+    logo: '/logo/studio-frontier-logo.jpeg',
     role: "Software Developer",
     startDate: "July 2024",
-    endDate: "Present",
+    endDate: "July 2025",
     projects: [
       {
         id: 1,
@@ -124,6 +225,7 @@ export const EXPERIENCE = [
   {
     company: "Heisentech Solutions",
     companyURL: "https://heisentech.com",
+    logo: '/logo/heisentech-logo.jpeg',
     role: "JavaScript Developer - React & React Native",
     startDate: "July 2022",
     endDate: "July 2024",
@@ -269,6 +371,7 @@ export const EXPERIENCE = [
   {
     company: "Lucien Solutions",
     companyURL: "https://luciensolutions.com/",
+    logo: '/logo/lucien-logo.jpeg',
     role: "Frontend Developer",
     startDate: "June 2022",
     endDate: "July 2022",
