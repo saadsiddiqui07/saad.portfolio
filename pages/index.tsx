@@ -4,6 +4,7 @@ import Head from "next/head";
 import CaseStudies from "@/components/case-studies";
 import WritingSection from "@/components/writing";
 import Footer from "@/components/footer";
+// import GithubSection from "@/components/github-section";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       <main className="md:mt-10 mb-16">
         <Header />
         <HeroSection />
-        <CaseStudies />
+        {/* <CaseStudies /> */}
         <WritingSection />
         {/* <GithubSection /> */}
       <Footer />

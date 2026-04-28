@@ -6,7 +6,7 @@ const CaseStudies = () => {
   return (
     <section
       id="case-studies"
-      className={`mt-20 mx-5 sm:mx-10 md:mx-20 space-y-12`}
+      className={`mt-20 mx-5 sm:mx-10 space-y-12`}
       aria-labelledby="case-studies-heading"
     >
       <header className="space-y-2">

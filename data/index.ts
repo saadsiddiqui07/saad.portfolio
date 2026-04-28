@@ -17,7 +17,7 @@ export const PORTFOLIO = {
   links: [
     {
       name: "Case Studies",
-      link: "/#case-studies",
+      link: "/case-studies",
     },
     {
       name: "Writing",
