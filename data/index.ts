@@ -21,7 +21,7 @@ export const PORTFOLIO = {
     },
     {
       name: "Writing",
-      link: "/#writing",
+      link: "/writing",
     },
     {
       name: "Work Experience",

@@ -1,10 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/hero-section";
 import Head from "next/head";
-import CaseStudies from "@/components/case-studies";
-import WritingSection from "@/components/writing";
 import Footer from "@/components/footer";
-// import GithubSection from "@/components/github-section";
 
 export default function Home() {
   return (
@@ -19,7 +16,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         {/* <CaseStudies /> */}
-        <WritingSection />
+        {/* <WritingSection /> */}
         {/* <GithubSection /> */}
       <Footer />
 
