@@ -4,7 +4,7 @@ import LinkedinIcon from "../components/icons/LinkedinIcon";
 
 export const PORTFOLIO = {
   name: "Saad Siddiqui",
-  headline: "Frontend Engineer building AI products with React Native",
+  headline: "Software Engineer building AI products with React Native",
   subheadline:
     "I design and ship performance-focused interfaces with clean architecture, reusable components, and product-first thinking from trading dashboards to AI-powered mobile apps.",
   expertise:

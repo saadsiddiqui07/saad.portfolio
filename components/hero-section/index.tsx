@@ -17,6 +17,19 @@ const HeroSection = () => {
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-600 dark:text-gray-400">
           {PORTFOLIO.name} 
         </p>
+        <div className="dark:bg-gray-800 bg-gray-100 rounded-lg sm:w-max p-1 pr-2 italic my-2">
+          <p className="text-md md:text-lg lg:text-xl font-medium text-gray-900 dark:text-gray-200">
+            {PORTFOLIO.company.role} at{" "}
+            <a
+              href={PORTFOLIO.company.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold hover:underline underline-offset-4 hover:text-gray-700 dark:hover:text-gray-100"
+            >
+              {PORTFOLIO.company.name}
+            </a>
+          </p>
+        </div>
         <h1
           id="hero-heading"
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mt-3 text-left text-black dark:text-white"
