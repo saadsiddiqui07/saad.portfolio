@@ -14,17 +14,17 @@ const HeroSection = () => {
       aria-labelledby="hero-heading"
     >
       <div className="max-w-4xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-600 dark:text-gray-400">
+        <p className="text-md font-semibold uppercase tracking-[0.2em] text-gray-600 dark:text-gray-400">
           {PORTFOLIO.name} 
         </p>
         <div className="dark:bg-gray-800 bg-gray-100 rounded-lg sm:w-max p-1 pr-2 italic my-2">
-          <p className="text-md md:text-lg lg:text-xl font-medium text-gray-900 dark:text-gray-200">
+          <p className="text-sm md:text-lg lg:text-xl font-medium text-gray-900 dark:text-gray-200">
             {PORTFOLIO.company.role} at{" "}
             <a
               href={PORTFOLIO.company.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold hover:underline underline-offset-4 hover:text-gray-700 dark:hover:text-gray-100"
+              className="font-semibold underline underline-offset-2 hover:text-gray-700 dark:hover:text-gray-100"
             >
               {PORTFOLIO.company.name}
             </a>
