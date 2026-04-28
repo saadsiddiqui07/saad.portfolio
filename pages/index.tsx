@@ -3,7 +3,6 @@ import HeroSection from "@/components/hero-section";
 import Head from "next/head";
 import CaseStudies from "@/components/case-studies";
 import WritingSection from "@/components/writing";
-import GithubSection from "@/components/github-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
