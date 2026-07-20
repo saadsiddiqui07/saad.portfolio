@@ -3,8 +3,10 @@ interface Project {
   id: number;
   isLive: boolean;
   isWebLive: boolean;
-  webURL: string;
-  appURL: string;
+  webURL?: string;
+  iOSURL?: string;
+  androidURL?: string;
+  appURL?: string;
   name: string;
   status: string;
   industry: string;

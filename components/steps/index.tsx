@@ -44,29 +44,47 @@ const Steps = () => {
             {exp.projects?.map((project, index) => (
               <>
                 <p className="text-lg font-extrabold mt-8 text-gray-500 dark:text-gray-300">
-                  {project.name}{" "}
-                  {project.isLive && (
+                  {project.name}
+
+                  {project.iOSURL && (
                     <>
-                      - {""}
+                      {" "}
+                      -{" "}
                       <a
-                        href={project.appURL}
+                        href={project.iOSURL}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="font-bold decoration-yellow underline"
                       >
                         App Store
-                      </a>{" "}
-                      📱
+                      </a>
                     </>
                   )}
+
+                  {project.androidURL && (
+                    <>
+                      {project.iOSURL ? " | " : " - "}
+                      <a
+                        href={project.androidURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold decoration-yellow underline"
+                      >
+                        Play Store
+                      </a>
+                    </>
+                  )}
+
                   {project.isWebLive && (
                     <>
-                      - {""}
+                      {project.iOSURL || project.androidURL ? " | " : " - "}
                       <a
                         href={project.webURL}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="font-bold decoration-yellow underline"
                       >
-                        View live
+                        View Live
                       </a>
                     </>
                   )}

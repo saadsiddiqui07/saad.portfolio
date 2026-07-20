@@ -8,9 +8,9 @@ export default function Home() {
     <div className="md:max-w-6xl flex-1 md:mx-auto">
       <Head>
         <title>
-          Saad Siddiqui | Frontend Engineer – AI, Fintech, React & React Native
+          Saad Siddiqui | Software Engineer – AI, Fintech, React & React Native
         </title>
-        <link rel="icon" href="/react-logo.png" sizes="any" />
+        <link rel="icon" href="/react-logo.jpeg" sizes="any" />
       </Head>
       <main className="md:mt-10 mb-16">
         <Header />
