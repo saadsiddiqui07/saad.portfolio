@@ -17,7 +17,7 @@ const HeroSection = () => {
         <p className="text-md font-semibold uppercase tracking-[0.2em] p-1 text-gray-600 dark:text-gray-400">
           {PORTFOLIO.name} 
         </p>
-        <div className="dark:bg-gray-800 rounded-lg sm:w-max p-1 pr-2 my-2">
+        <div className="rounded-lg sm:w-max p-1 pr-2 my-2">
           <p className="text-sm md:text-lg lg:text-xl font-medium text-gray-900 dark:text-gray-200">
             {PORTFOLIO.company.role} at{" "}
             <a
